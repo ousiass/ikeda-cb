@@ -1,0 +1,46 @@
+---
+import PageLayout from '../components/templates/PageLayout.astro';
+import CartItem from '../components/organisms/CartItem.astro';
+import OrderSummary from '../components/organisms/OrderSummary.astro';
+---
+
+<PageLayout title="Cart | Ikeda Senchado" cartCount={2}>
+  <div class="pt-32 pb-24 px-8 md:px-16 max-w-[1920px] mx-auto min-h-screen">
+    <div class="max-w-[1280px] mx-auto">
+      <h1 class="font-h1 text-h1 mb-16 text-center">Your Selection</h1>
+      <div class="flex flex-col lg:flex-row gap-16">
+        <!-- Cart Items -->
+        <div class="flex-grow space-y-12">
+          <CartItem
+            image="https://lh3.googleusercontent.com/aida-public/AB6AXuCRxVkeihVt7abwFfl3D1_0Mlb8hEwkyxKiY3ucWQ1M6GSnvy4NQe-9ZVC3KiIzTUVBzCHdNTR-ifn30o0RTHag99T5LsS1cBc4pKo5QtDM-33JRqg9iBeruhAMq0vMiDVOGnK27s_OvVZj8WPumGbKwJYn3B1VCJXhkiT7F7ayX8_AoiPCU2p6LfYJ2p0KbrDqyOGzK9dIyiDxFwUJTr9d4O5laIwzN-cFCutA8RLhf2PP2akgSQuW8PZvmrxSixN709Sg5QYLeKg"
+            alt=""
+            name="Uji Ceremonial Matcha"
+            variant="30g Tin / Kyoto, Japan"
+            quantity={1}
+            price="$42.00"
+          />
+          <CartItem
+            image="https://lh3.googleusercontent.com/aida-public/AB6AXuC6vcxLsFVq_u6sTnP2AMzg01nAL-ip3yzVDDisIf9qA9Vyhy4dK3KQxyO69-_kHb_u3TPRdu0vQGy1vEoHWzj9mzhxs6fqITquYFkqYK3wNuPs681RHAiUHErxMh9YVkcIIkjZmM8ugSWwvoGzc3rFH2W2ehGzjwbDTZy8g-X_2r65BnkO6MT5nqUWwXhoMeIciNrK9MFEe8uOfBVVwdxJbY75uhB29mmE-tutd3yQaaCwyeX1jIUAZD9tTywJq-jgCQLqaS37JlY"
+            alt=""
+            name="Handmade Kyusu Teapot"
+            variant="Carbon Black / Tokoname Clay"
+            quantity={1}
+            price="$185.00"
+          />
+        </div>
+        <!-- Summary -->
+        <OrderSummary
+          rows={[
+            { label: 'Subtotal', value: '$227.00' },
+            { label: 'Shipping', value: 'Calculated at checkout' },
+            { label: 'Tax', value: '$18.16' },
+          ]}
+          total="$245.16"
+          ctaLabel="Proceed to Checkout"
+          ctaHref="/checkout/"
+          footnote="Secure Checkout Powered by Stripe"
+        />
+      </div>
+    </div>
+  </div>
+</PageLayout>

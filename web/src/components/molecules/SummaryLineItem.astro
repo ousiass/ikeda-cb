@@ -1,0 +1,59 @@
+---
+type Variant = 'compact' | 'detail';
+
+interface Props {
+  image: string;
+  alt?: string;
+  name: string;
+  meta?: string;
+  price: string;
+  quantity: number;
+  variant?: Variant;
+  class?: string;
+}
+
+const {
+  image,
+  alt = '',
+  name,
+  meta,
+  price,
+  quantity,
+  variant = 'compact',
+  class: className = '',
+} = Astro.props;
+---
+
+{
+  variant === 'compact' ? (
+    <div class:list={['flex items-center gap-6', className]}>
+      <div class="relative w-20 h-20 bg-white flex-shrink-0">
+        <img class="w-full h-full object-cover" src={image} alt={alt} loading="lazy" />
+        <span class="absolute -top-2 -right-2 bg-zinc-800 text-white w-5 h-5 flex items-center justify-center text-[10px] rounded-full">
+          {quantity}
+        </span>
+      </div>
+      <div class="flex-1">
+        <h3 class="font-body-md font-semibold text-on-surface">{name}</h3>
+        {meta && <p class="font-label-sm text-on-surface-variant">{meta}</p>}
+      </div>
+      <p class="font-body-md">{price}</p>
+    </div>
+  ) : (
+    <div class:list={['flex gap-8 group', className]}>
+      <div class="w-32 h-40 bg-surface-container-low flex-shrink-0 overflow-hidden border border-outline-variant">
+        <img class="w-full h-full object-cover" src={image} alt={alt} loading="lazy" />
+      </div>
+      <div class="flex flex-col justify-between py-2 flex-grow">
+        <div>
+          <div class="flex justify-between items-start">
+            <h4 class="font-h3 text-[20px] text-primary">{name}</h4>
+            <span class="font-body-md text-primary">{price}</span>
+          </div>
+          {meta && <p class="font-label-sm text-on-primary-container mt-1 uppercase">{meta}</p>}
+        </div>
+        <p class="font-body-md text-on-surface-variant">Qty: {quantity}</p>
+      </div>
+    </div>
+  )
+}

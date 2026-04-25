@@ -1,0 +1,33 @@
+---
+import StatusBadge from '../atoms/StatusBadge.astro';
+import Icon from '../atoms/Icon.astro';
+
+interface Props {
+  title: string;
+  lines: string[];
+  isDefault?: boolean;
+  class?: string;
+}
+
+const { title, lines, isDefault = false, class: className = '' } = Astro.props;
+---
+
+<div class:list={['bg-white p-10 border border-outline-variant relative group', className]}>
+  <div class="absolute top-6 right-6 flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
+    <button type="button" aria-label="Edit" class="text-outline hover:text-secondary">
+      <Icon name="edit" />
+    </button>
+    <button type="button" aria-label="Delete" class="text-outline hover:text-error">
+      <Icon name="delete" />
+    </button>
+  </div>
+  {
+    isDefault && (
+      <StatusBadge tone="success" class="mb-6">Default</StatusBadge>
+    )
+  }
+  <h4 class="font-h3 text-h3 mb-4">{title}</h4>
+  <div class="font-body-md text-body-md text-on-surface-variant space-y-1">
+    {lines.map((line) => <p>{line}</p>)}
+  </div>
+</div>

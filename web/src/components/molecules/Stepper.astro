@@ -1,0 +1,33 @@
+---
+import Icon from '../atoms/Icon.astro';
+
+interface Step {
+  label: string;
+  active?: boolean;
+}
+
+interface Props {
+  steps: Step[];
+  class?: string;
+}
+
+const { steps, class: className = '' } = Astro.props;
+---
+
+<nav class:list={['flex items-center gap-4 mb-12', className]} aria-label="Progress">
+  {
+    steps.map((step, idx) => (
+      <>
+        <span
+          class:list={[
+            'font-label-sm text-label-sm uppercase',
+            step.active ? 'text-on-surface' : 'text-outline',
+          ]}
+        >
+          {step.label}
+        </span>
+        {idx < steps.length - 1 && <Icon name="chevron_right" class="text-outline" />}
+      </>
+    ))
+  }
+</nav>

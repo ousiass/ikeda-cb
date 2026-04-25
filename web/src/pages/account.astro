@@ -1,0 +1,156 @@
+---
+import PageLayout from '../components/templates/PageLayout.astro';
+import Button from '../components/atoms/Button.astro';
+import Icon from '../components/atoms/Icon.astro';
+import StatusBadge from '../components/atoms/StatusBadge.astro';
+import SectionHeading from '../components/molecules/SectionHeading.astro';
+import AddressCard from '../components/molecules/AddressCard.astro';
+---
+
+<PageLayout title="Account | Ikeda Senchado">
+  <div class="max-w-screen-xl mx-auto px-12 py-32">
+    <!-- Account Hero Section -->
+    <div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+      <div class="space-y-4">
+        <p class="font-label-sm text-secondary uppercase tracking-widest">Welcome back</p>
+        <h1 class="font-h1 text-h1 text-on-surface">Hiroshi Tanaka</h1>
+        <p class="font-body-md text-outline">Member since October 2023 | 420 Kado Points</p>
+      </div>
+      <div class="flex gap-4">
+        <Button variant="primary" as="button">Log Out</Button>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+      <!-- Sidebar Navigation -->
+      <aside class="lg:col-span-3 space-y-8">
+        <div class="flex flex-col space-y-6">
+          <a class="font-label-sm text-primary flex items-center gap-3 border-l-2 border-primary pl-4 py-1" href="#">
+            <Icon name="dashboard" /> DASHBOARD
+          </a>
+          <a class="font-label-sm text-outline hover:text-primary flex items-center gap-3 pl-4 py-1 transition-all" href="#">
+            <Icon name="shopping_cart" /> ORDER HISTORY
+          </a>
+          <a class="font-label-sm text-outline hover:text-primary flex items-center gap-3 pl-4 py-1 transition-all" href="#">
+            <Icon name="location_on" /> ADDRESSES
+          </a>
+          <a class="font-label-sm text-outline hover:text-primary flex items-center gap-3 pl-4 py-1 transition-all" href="#">
+            <Icon name="favorite" /> WISHLIST
+          </a>
+          <a class="font-label-sm text-outline hover:text-primary flex items-center gap-3 pl-4 py-1 transition-all" href="#">
+            <Icon name="settings" /> PREFERENCES
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content Area -->
+      <div class="lg:col-span-9 space-y-24">
+        <!-- Order History Section -->
+        <section>
+          <SectionHeading title="Recent Orders" linkText="View All" linkHref="#" />
+          <div class="space-y-4">
+            <div class="bg-white p-8 border border-transparent hover:border-neutral-200 transition-all flex flex-col md:flex-row md:items-center justify-between gap-6 group">
+              <div class="flex items-center gap-8">
+                <div class="w-20 h-20 bg-surface-container overflow-hidden">
+                  <img
+                    alt=""
+                    class="w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtKS-5GJ-hFoFaDDm3POHaQu33SIX7OaXZfPtpx5o0_L6CeY8bXNj8yupbHVTr7_8zgBsMJ0p41XnnaLA4ChhrR3RsG97X-faLSIy_6FyeMqc4S5wZfkjM6zQbiHeynY9-nfZHNPzzuHO9pvhYs4gWrJZ7gVeB9tZDiqIk2R7pqAOw733DuPmBwJZSxxIH37Kpkkrk_DoMZhMDXUMbKy1lw2eCJEeI3QhEI-MqG9q3b1EdTUDurpdN9elQgOEYsg7ijirJIXrgWTQ"
+                  />
+                </div>
+                <div>
+                  <p class="font-label-sm text-outline">ORDER #88210</p>
+                  <h3 class="font-h3 text-lg mt-1">Uji Ceremony Set &amp; Whisk</h3>
+                  <p class="font-body-md text-outline text-sm">Placed on March 12, 2024</p>
+                </div>
+              </div>
+              <div class="flex flex-col md:items-end gap-2">
+                <StatusBadge tone="success">Delivered</StatusBadge>
+                <p class="font-h3 text-primary">¥12,400</p>
+                <Button variant="outline" as="a" href="#" class="px-6 py-2">View Order</Button>
+              </div>
+            </div>
+
+            <div class="bg-white p-8 border border-transparent hover:border-neutral-200 transition-all flex flex-col md:flex-row md:items-center justify-between gap-6 group">
+              <div class="flex items-center gap-8">
+                <div class="w-20 h-20 bg-surface-container overflow-hidden">
+                  <img
+                    alt=""
+                    class="w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm_jZw8dBYp5rIAX_VUi2fkPsjqFIF3MZ6g4GEyTK9cp6WERKTn5utCjGOtuM3lZKSB3Y7Y4Bl4OnhpWCubMjQ1s3LKQQF-ilKFRNgNobUir2KROzxEBqL_boCcAuGZg13V8rQUU5wVKdWNtt3HJ9tYDy2TpEDZfniH3U9_fwQRSJapsmpQA3HDEfSkv2NVGKq_GOGDs3UY0unGrV-SP13AxgU_b1YFV6Xxaf6w9Mwni3Pqlm87bMNXsFIGR46Fe5fsV_2MWPpvXg"
+                  />
+                </div>
+                <div>
+                  <p class="font-label-sm text-outline">ORDER #87954</p>
+                  <h3 class="font-h3 text-lg mt-1">First Harvest Sencha (100g)</h3>
+                  <p class="font-body-md text-outline text-sm">Placed on February 28, 2024</p>
+                </div>
+              </div>
+              <div class="flex flex-col md:items-end gap-2">
+                <StatusBadge tone="default">Shipped</StatusBadge>
+                <p class="font-h3 text-primary">¥4,200</p>
+                <Button variant="outline" as="a" href="#" class="px-6 py-2">View Order</Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Address Management Section -->
+        <section>
+          <div class="flex justify-between items-baseline mb-8 border-b border-neutral-100 pb-4">
+            <h2 class="font-h2 text-h2">Shipping Addresses</h2>
+            <button type="button" class="font-label-sm text-secondary hover:underline flex items-center gap-2">
+              <Icon name="add" class="text-sm" /> ADD NEW ADDRESS
+            </button>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <AddressCard
+              title="Tokyo Residence"
+              isDefault
+              lines={[
+                'Hiroshi Tanaka',
+                'Minato-ku, Roppongi 6-10-1',
+                'Roppongi Hills Mori Tower 12F',
+                'Tokyo, 106-6108',
+                'Japan',
+                '+81 3-XXXX-XXXX',
+              ]}
+            />
+            <AddressCard
+              title="Kyoto Office"
+              lines={[
+                'Hiroshi Tanaka',
+                'Shimogyo-ku, Karasuma-dori',
+                'Shijo-sagaru 2-chome',
+                'Kyoto, 600-8411',
+                'Japan',
+                '+81 75-XXXX-XXXX',
+              ]}
+            />
+          </div>
+        </section>
+
+        <!-- Loyalty Program Teaser -->
+        <section class="bg-neutral-900 text-white p-16 flex flex-col md:flex-row items-center justify-between gap-12 overflow-hidden relative">
+          <div
+            class="absolute inset-0 opacity-20"
+            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBg26xgd162VTJpFMAMNuN8yvy78QFF_13wtNewNrUXJT-HPYBta0vX78wyM-q3yKs1DFWAXs-PQunweVAeI4zvcv7lz276tR6ApdBsF1X1hUTaH-9hivHQoq61OqXmo-x5QU6fsuzgkEvHYz3p_4VPjQ2y3XWTIKYEhNxpYgsPJ-jE7YnHhfJ-8GpxdU5q9DPuWgZR9ILI2gI3Qx-2URrSag_nrtskkjJ9YO1j04PYV6Vz7gWapQPeQgKLFltHlwm6u8UoTFmcMPI'); background-size: cover; background-position: center;"
+          >
+          </div>
+          <div class="relative z-10 max-w-md">
+            <h2 class="font-h2 text-3xl mb-4">The Way of Tea Rewards</h2>
+            <p class="font-body-md text-neutral-400 mb-8">
+              You are only 80 points away from becoming a 'Kintsugi' Tier member. Unlock exclusive seasonal
+              harvests and early access to artisan ceramics.
+            </p>
+            <Button variant="primary" as="a" href="#">View Rewards</Button>
+          </div>
+          <div class="relative z-10 text-center">
+            <div class="text-6xl font-h1 mb-2">420</div>
+            <div class="font-label-sm tracking-widest uppercase text-neutral-400">Total Points Earned</div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</PageLayout>

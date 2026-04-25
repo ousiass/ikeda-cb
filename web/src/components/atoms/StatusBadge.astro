@@ -1,0 +1,27 @@
+---
+type Tone = 'default' | 'success' | 'warning' | 'error';
+
+interface Props {
+  tone?: Tone;
+  class?: string;
+}
+
+const { tone = 'default', class: className = '' } = Astro.props;
+
+const styles: Record<Tone, string> = {
+  default: 'bg-surface-container text-on-surface',
+  success: 'bg-secondary-container text-on-secondary-container',
+  warning: 'bg-tertiary-fixed text-on-tertiary-fixed',
+  error: 'bg-error-container text-on-error-container',
+};
+---
+
+<span
+  class:list={[
+    'inline-flex items-center px-3 py-1 font-label-sm text-[10px] uppercase tracking-widest',
+    styles[tone],
+    className,
+  ]}
+>
+  <slot />
+</span>

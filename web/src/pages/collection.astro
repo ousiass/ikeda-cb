@@ -1,0 +1,132 @@
+---
+import PageLayout from '../components/templates/PageLayout.astro';
+import ProductCard from '../components/molecules/ProductCard.astro';
+---
+
+<PageLayout title="Collection | Ikeda Senchado" activePage="Collections">
+  <div class="pt-32 pb-24 max-w-[1920px] mx-auto px-8 md:px-16">
+    <!-- Hero Title Section -->
+    <div class="mb-20 text-center">
+      <h1 class="font-h1 text-h1 text-primary mb-4">The Permanent Collection</h1>
+      <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
+        Sourced directly from artisan farmers in Uji, Shizuoka, and Yame. Each selection represents the
+        pinnacle of seasonal craftsmanship.
+      </p>
+    </div>
+
+    <!-- Filter & Grid Layout -->
+    <div class="flex flex-col lg:flex-row gap-16">
+      <!-- Sidebar Filter -->
+      <aside class="w-full lg:w-64 flex-shrink-0">
+        <div class="sticky top-40 space-y-12">
+          <div>
+            <h4 class="font-label-sm text-label-sm uppercase mb-6 border-b border-stone-200 pb-2">Category</h4>
+            <ul class="space-y-4 font-body-md text-on-surface">
+              <li><a class="hover:text-secondary transition-colors" href="#">All Teas</a></li>
+              <li><a class="text-stone-400 hover:text-secondary transition-colors" href="#">Matcha</a></li>
+              <li><a class="text-stone-400 hover:text-secondary transition-colors" href="#">Sencha</a></li>
+              <li><a class="text-stone-400 hover:text-secondary transition-colors" href="#">Gyokuro</a></li>
+              <li><a class="text-stone-400 hover:text-secondary transition-colors" href="#">Hojicha</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-label-sm text-label-sm uppercase mb-6 border-b border-stone-200 pb-2">Region</h4>
+            <ul class="space-y-4 font-body-md text-on-surface">
+              <li>
+                <label class="flex items-center gap-3 cursor-pointer">
+                  <input class="rounded-none border-stone-300 text-primary focus:ring-0" type="checkbox" />
+                  <span class="text-stone-600">Uji, Kyoto</span>
+                </label>
+              </li>
+              <li>
+                <label class="flex items-center gap-3 cursor-pointer">
+                  <input class="rounded-none border-stone-300 text-primary focus:ring-0" type="checkbox" />
+                  <span class="text-stone-600">Yame, Fukuoka</span>
+                </label>
+              </li>
+              <li>
+                <label class="flex items-center gap-3 cursor-pointer">
+                  <input class="rounded-none border-stone-300 text-primary focus:ring-0" type="checkbox" />
+                  <span class="text-stone-600">Shizuoka</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-label-sm text-label-sm uppercase mb-6 border-b border-stone-200 pb-2">Brew Type</h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 border border-stone-200 font-label-sm text-[10px] text-stone-600 uppercase">Hot Brew</span>
+              <span class="px-3 py-1 border border-stone-200 font-label-sm text-[10px] text-stone-600 uppercase">Cold Brew</span>
+              <span class="px-3 py-1 border border-stone-200 font-label-sm text-[10px] text-stone-600 uppercase">Ceremonial</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Product Grid -->
+      <div class="flex-grow">
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-20 gap-x-12">
+          <ProductCard
+            image="https://lh3.googleusercontent.com/aida-public/AB6AXuBCXT8SXdrPAP00VzhQyWqIxmnLMT1m5GAJTWvg2rljnXGVQjHsflOHCl2ygaY1zM-hCHFqDOjjBG9P1yBzIXokJ3CXjJM4BFabp5k9rVIqtyqZwAgfg02WJgP8xQ96n7LkLg-19ZTUXr0QW8sx7hNLf8PY_Uj1c84_uQs4mq5yJOT6TsnseprwM3QSjepfhaKUeLawtLZAQp5LYztOLq7zT43C8-f1D4da3NdTMCpY_QPmz9qnuIqgdDNATCAgQlM5SlR0pCYdUsA"
+            alt=""
+            label="Ceremonial Grade"
+            name="Uji Hikari Matcha"
+            price="$48.00"
+            href="/product/"
+          />
+          <ProductCard
+            image="https://lh3.googleusercontent.com/aida-public/AB6AXuBWWLuqukJXYrhQEigDaEzi2ie31JH8dRbT9IPA8EiC6b5AN-6C7tTbT-QBozFroyrgAUGFK9HocAyZf82l87zqjKlmoX3T8Yy_f65eWR7lwiZdHapDHfxq0cnbC2yMZl5OTmoI3UThWV3fvXCkv3uxdL6Fk-bl4MiFC1wYobx4qogUqensU3RIMrIfRMJJSi6PzcOop9aPuNxtv0tmBC2ica8Is-38lVn9uH-ISG2JKASncfYuEGNsqKeVah9BODw9o129XFAj248"
+            alt=""
+            label="First Flush"
+            name="Yame Sencha No. 1"
+            price="$32.00"
+            href="/product/"
+          />
+          <ProductCard
+            image="https://lh3.googleusercontent.com/aida-public/AB6AXuAWsVg_kj44oJVMsOeJ_Y5kPOiGinJR0yPsFZwtVJCwuLsBeiBymLDVow8_H7wjuBQizhr_wuEKRSK_Y0HYrYqjxoJQB-aB1bT8r_I2YaS4W_VIWO7RxA-Av7yA6Nd3_R6BmuBTWg3pu6hBVuQ5n9NzmkZW3kiqbKebpn4livmnxjhjF80hBFWPG2_YlQsayFb_nbAhkVtd4QN3gGyDWX4lOdclatWwL156ioWk5UEJG15U7_SiZF7BxGnQ9dQuGjG-GIzdbGr8NxU"
+            alt=""
+            label="Shaded Leaf"
+            name="Imperial Gyokuro"
+            price="$64.00"
+            href="/product/"
+          />
+          <ProductCard
+            image="https://lh3.googleusercontent.com/aida-public/AB6AXuDQfF74QdJZOOqr7BVQGdpy8VhDSryHq-toH4Xnk-AZrnAEE8wGG7_H5-2kT8Y73_x40IOY1gp03Rv8z3tqcvqb17pv23-lDOgZRP48oksrYKzR7lU2BGqrjvy9J8eK74_ZPkdmvitQMmV3cOY7xYo_vokXgs7GrANUurq5MLD7cl_dQrvYNlICy_cZdt6bzmKmliWVy7fa3JF57rh9shC3lxfL6rpQYZWKkjxgc42lyA1ZoMkKJwtBDgaK5KR__7v9Sal7dHhQzlk"
+            alt=""
+            label="Roasted"
+            name="Dark Roast Hojicha"
+            price="$26.00"
+            href="/product/"
+          />
+          <ProductCard
+            image="https://lh3.googleusercontent.com/aida-public/AB6AXuBYE3rPVkb4IyOZnbaMOTkYpnlTNRWxo1XuH5aApOYYoeTvm7vQ-lH_Lq2w3uq4Tk4FMKfvqp-2aw6cRZ25_SI4meRfT29ykrwE1H4zeqY7qouuNbp-D59C7KVD7KggMM37DVkxZdIt6GGJIhu2UC_sXMUmup0shzGIBorZxmLBWLopHijN4Ta10yOauquA4GbnsSVVleGhAztjnyKF9dYWOEs5rG5JN-Ry5IYdSAU3DZUYExpZIPwdEH_a_3-9z5YXQtQ9iZwhoUU"
+            alt=""
+            label="Collection Exclusive"
+            name="Spring Harvest Sampler"
+            price="$85.00"
+            href="/product/"
+          />
+          <!-- Empty State / Coming Soon Placeholder -->
+          <div class="flex flex-col items-center justify-center border border-dashed border-stone-300 aspect-[4/5]">
+            <p class="font-serif italic text-stone-400">Next harvest arriving June 2024</p>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="mt-24 flex justify-center items-center gap-8 border-t border-stone-100 pt-12">
+          <button type="button" class="font-label-sm text-label-sm uppercase text-stone-400 hover:text-primary transition-colors">
+            Previous
+          </button>
+          <div class="flex gap-4">
+            <span class="font-label-sm text-label-sm text-primary">01</span>
+            <span class="font-label-sm text-label-sm text-stone-300">02</span>
+            <span class="font-label-sm text-label-sm text-stone-300">03</span>
+          </div>
+          <button type="button" class="font-label-sm text-label-sm uppercase text-primary hover:text-secondary transition-colors">
+            Next
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</PageLayout>

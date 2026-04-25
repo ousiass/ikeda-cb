@@ -1,0 +1,29 @@
+---
+interface Props {
+  image: string;
+  alt: string;
+  label?: string;
+  name: string;
+  price: string;
+  href?: string;
+  class?: string;
+}
+
+const { image, alt, label, name, price, href = '#', class: className = '' } = Astro.props;
+---
+
+<a href={href} class:list={['group block', className]}>
+  <div class="aspect-[4/5] mb-8 overflow-hidden bg-surface-container">
+    <img
+      src={image}
+      alt={alt}
+      loading="lazy"
+      class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+    />
+  </div>
+  <div class="text-center">
+    {label && <span class="font-label-sm text-label-sm text-secondary uppercase">{label}</span>}
+    <h3 class="font-h3 text-h3 mt-2">{name}</h3>
+    <p class="font-body-md text-body-md text-on-surface-variant mt-2">{price}</p>
+  </div>
+</a>

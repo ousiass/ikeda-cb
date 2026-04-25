@@ -1,0 +1,21 @@
+---
+interface Props {
+  title: string;
+  linkText?: string;
+  linkHref?: string;
+  class?: string;
+}
+
+const { title, linkText, linkHref = '#', class: className = '' } = Astro.props;
+---
+
+<div class:list={['flex justify-between items-baseline mb-8 border-b border-outline-variant pb-4', className]}>
+  <h2 class="font-h2 text-h2">{title}</h2>
+  {
+    linkText && (
+      <a href={linkHref} class="font-label-sm text-label-sm text-outline hover:text-secondary uppercase transition-colors">
+        {linkText}
+      </a>
+    )
+  }
+</div>

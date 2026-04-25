@@ -1,0 +1,44 @@
+---
+import Icon from '../atoms/Icon.astro';
+
+interface Props {
+  image: string;
+  alt: string;
+  name: string;
+  variant?: string;
+  quantity: number;
+  price: string;
+  class?: string;
+}
+
+const { image, alt, name, variant, quantity, price, class: className = '' } = Astro.props;
+---
+
+<div class:list={['flex gap-8 pb-12 border-b border-outline-variant', className]}>
+  <div class="w-40 h-40 bg-surface-container overflow-hidden flex-shrink-0">
+    <img src={image} alt={alt} class="w-full h-full object-cover" loading="lazy" />
+  </div>
+  <div class="flex flex-col justify-between flex-grow">
+    <div>
+      <div class="flex justify-between items-start">
+        <h3 class="font-h3 text-h3 mb-2">{name}</h3>
+        <button type="button" aria-label="Remove" class="text-outline hover:text-on-surface transition-colors">
+          <Icon name="close" />
+        </button>
+      </div>
+      {variant && <p class="font-label-sm text-label-sm text-on-surface-variant uppercase">{variant}</p>}
+    </div>
+    <div class="flex justify-between items-end">
+      <div class="flex items-center border border-outline-variant px-3 py-1 gap-4">
+        <button type="button" aria-label="Decrease" class="text-outline hover:text-on-surface">
+          <Icon name="remove" class="text-sm" />
+        </button>
+        <span class="font-label-sm text-label-sm w-4 text-center">{quantity}</span>
+        <button type="button" aria-label="Increase" class="text-outline hover:text-on-surface">
+          <Icon name="add" class="text-sm" />
+        </button>
+      </div>
+      <span class="font-body-lg text-body-lg text-on-surface">{price}</span>
+    </div>
+  </div>
+</div>

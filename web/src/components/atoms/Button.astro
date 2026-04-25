@@ -1,0 +1,46 @@
+---
+type Variant = 'primary' | 'outline' | 'ghost';
+type As = 'button' | 'a';
+
+interface Props {
+  variant?: Variant;
+  as?: As;
+  href?: string;
+  type?: 'button' | 'submit' | 'reset';
+  class?: string;
+  fullWidth?: boolean;
+}
+
+const {
+  variant = 'primary',
+  as = 'button',
+  href,
+  type = 'button',
+  class: className = '',
+  fullWidth = false,
+} = Astro.props;
+
+const base =
+  'inline-flex items-center justify-center px-12 py-5 font-label-sm text-label-sm uppercase tracking-widest transition-colors';
+
+const styles: Record<Variant, string> = {
+  primary: 'bg-secondary text-on-secondary hover:bg-on-secondary-container',
+  outline: 'border border-outline text-on-surface hover:bg-zinc-100',
+  ghost: 'text-on-surface hover:text-secondary',
+};
+
+const widthClass = fullWidth ? 'w-full' : '';
+const classes = [base, styles[variant], widthClass, className].filter(Boolean).join(' ');
+---
+
+{
+  as === 'a' ? (
+    <a href={href} class={classes}>
+      <slot />
+    </a>
+  ) : (
+    <button type={type} class={classes}>
+      <slot />
+    </button>
+  )
+}

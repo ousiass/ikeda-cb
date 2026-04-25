@@ -1,0 +1,40 @@
+---
+interface Props {
+  name: string;
+  type?: string;
+  placeholder?: string;
+  value?: string;
+  required?: boolean;
+  autocomplete?: string;
+  label?: string;
+  class?: string;
+}
+
+const {
+  name,
+  type = 'text',
+  placeholder = '',
+  value,
+  required = false,
+  autocomplete,
+  label,
+  class: className = '',
+} = Astro.props;
+
+const inputClass =
+  'w-full border-0 border-b border-outline-variant bg-transparent py-3 font-body-md text-body-md focus:border-primary focus:outline-none focus:ring-0 transition-colors';
+---
+
+<label class:list={['block', className]}>
+  {label && <span class="font-label-sm text-label-sm text-on-surface-variant uppercase">{label}</span>}
+  <input
+    class={inputClass}
+    id={name}
+    name={name}
+    type={type}
+    placeholder={placeholder}
+    value={value}
+    required={required}
+    autocomplete={autocomplete}
+  />
+</label>

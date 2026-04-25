@@ -1,158 +1,248 @@
 <!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>KOKORO TEA / THE TEA CEREMONY — Mock Index</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Manrope:wght@400;600&display=swap" rel="stylesheet" />
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>THE TEA CEREMONY | Purity in Every Cup</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#e8e8e8",
+                        "surface-container-highest": "#e2e2e2",
+                        "secondary-fixed-dim": "#a2d48f",
+                        "on-tertiary-fixed-variant": "#464747",
+                        "inverse-primary": "#c8c6c5",
+                        "tertiary-container": "#1b1c1c",
+                        "surface-container-low": "#f3f3f3",
+                        "outline-variant": "#c4c7c7",
+                        "surface-bright": "#f9f9f9",
+                        "surface-dim": "#dadada",
+                        "on-background": "#1a1c1c",
+                        "on-secondary-fixed-variant": "#25501a",
+                        "on-primary-fixed-variant": "#474646",
+                        "surface": "#f9f9f9",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#000000",
+                        "surface-tint": "#5f5e5e",
+                        "secondary": "#3d6930",
+                        "tertiary-fixed-dim": "#c7c6c6",
+                        "surface-variant": "#e2e2e2",
+                        "on-error": "#ffffff",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-primary-container": "#858383",
+                        "on-primary-fixed": "#1c1b1b",
+                        "on-tertiary-container": "#848484",
+                        "primary-fixed": "#e5e2e1",
+                        "on-secondary-container": "#426f35",
+                        "outline": "#747878",
+                        "on-secondary-fixed": "#022100",
+                        "on-primary": "#ffffff",
+                        "background": "#f9f9f9",
+                        "surface-container": "#eeeeee",
+                        "on-surface": "#1a1c1c",
+                        "on-surface-variant": "#444748",
+                        "primary-container": "#1c1b1b",
+                        "secondary-container": "#bdf1a8",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#e3e2e2",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "inverse-surface": "#2f3131",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#bdf1a8",
+                        "on-secondary": "#ffffff",
+                        "primary": "#000000"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "element-gap": "16px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "section-padding": "120px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Manrope"],
+                        "h2": ["Noto Serif"],
+                        "body-md": ["Manrope"],
+                        "h3": ["Noto Serif"],
+                        "h1": ["Noto Serif"],
+                        "body-lg": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "h2": ["36px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "h3": ["24px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                        "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
 <style>
-  body { font-family: 'Manrope', sans-serif; }
-  h1, h2, .serif { font-family: 'Noto Serif', serif; }
-</style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #f9f9f9;
+        }
+    </style>
 </head>
-<body class="bg-[#f9f9f9] text-[#1a1c1c]">
-<div class="max-w-6xl mx-auto px-6 py-12">
-  <header class="mb-10 border-b border-[#c4c7c7] pb-6">
-    <h1 class="text-3xl font-bold tracking-wide">THE TEA CEREMONY</h1>
-    <p class="mt-2 text-sm text-[#464747]">Stitch mock — page navigation</p>
-  </header>
-
-  <main class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-    <a href="./home/" class="group block bg-white rounded-lg overflow-hidden border border-[#c4c7c7] hover:shadow-md transition">
-      <div class="aspect-video bg-[#e8e8e8] overflow-hidden">
-        <img src="./home/screen.png" alt="ホーム" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition" />
-      </div>
-      <div class="p-4">
-        <p class="text-xs text-[#464747] uppercase tracking-wider">home</p>
-        <p class="serif text-lg mt-1">ホーム</p>
-      </div>
-    </a>
-
-    <a href="./collection/" class="group block bg-white rounded-lg overflow-hidden border border-[#c4c7c7] hover:shadow-md transition">
-      <div class="aspect-video bg-[#e8e8e8] overflow-hidden">
-        <img src="./collection/screen.png" alt="商品一覧" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition" />
-      </div>
-      <div class="p-4">
-        <p class="text-xs text-[#464747] uppercase tracking-wider">collection</p>
-        <p class="serif text-lg mt-1">商品一覧</p>
-      </div>
-    </a>
-
-    <a href="./product/" class="group block bg-white rounded-lg overflow-hidden border border-[#c4c7c7] hover:shadow-md transition">
-      <div class="aspect-video bg-[#e8e8e8] overflow-hidden">
-        <img src="./product/screen.png" alt="商品詳細" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition" />
-      </div>
-      <div class="p-4">
-        <p class="text-xs text-[#464747] uppercase tracking-wider">product</p>
-        <p class="serif text-lg mt-1">商品詳細</p>
-      </div>
-    </a>
-
-    <a href="./cart/" class="group block bg-white rounded-lg overflow-hidden border border-[#c4c7c7] hover:shadow-md transition">
-      <div class="aspect-video bg-[#e8e8e8] overflow-hidden">
-        <img src="./cart/screen.png" alt="カート" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition" />
-      </div>
-      <div class="p-4">
-        <p class="text-xs text-[#464747] uppercase tracking-wider">cart</p>
-        <p class="serif text-lg mt-1">カート</p>
-      </div>
-    </a>
-
-    <a href="./checkout/" class="group block bg-white rounded-lg overflow-hidden border border-[#c4c7c7] hover:shadow-md transition">
-      <div class="aspect-video bg-[#e8e8e8] overflow-hidden">
-        <img src="./checkout/screen.png" alt="チェックアウト" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition" />
-      </div>
-      <div class="p-4">
-        <p class="text-xs text-[#464747] uppercase tracking-wider">checkout</p>
-        <p class="serif text-lg mt-1">チェックアウト</p>
-      </div>
-    </a>
-
-    <a href="./order-confirmation/" class="group block bg-white rounded-lg overflow-hidden border border-[#c4c7c7] hover:shadow-md transition">
-      <div class="aspect-video bg-[#e8e8e8] overflow-hidden">
-        <img src="./order-confirmation/screen.png" alt="注文確認" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition" />
-      </div>
-      <div class="p-4">
-        <p class="text-xs text-[#464747] uppercase tracking-wider">order-confirmation</p>
-        <p class="serif text-lg mt-1">注文確認</p>
-      </div>
-    </a>
-
-    <a href="./account/" class="group block bg-white rounded-lg overflow-hidden border border-[#c4c7c7] hover:shadow-md transition">
-      <div class="aspect-video bg-[#e8e8e8] overflow-hidden">
-        <img src="./account/screen.png" alt="マイページ" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition" />
-      </div>
-      <div class="p-4">
-        <p class="text-xs text-[#464747] uppercase tracking-wider">account</p>
-        <p class="serif text-lg mt-1">マイページ</p>
-      </div>
-    </a>
-
-    <a href="./contact/" class="group block bg-white rounded-lg overflow-hidden border border-[#c4c7c7] hover:shadow-md transition">
-      <div class="aspect-video bg-[#e8e8e8] overflow-hidden">
-        <img src="./contact/screen.png" alt="お問い合わせ A" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition" />
-      </div>
-      <div class="p-4">
-        <p class="text-xs text-[#464747] uppercase tracking-wider">contact</p>
-        <p class="serif text-lg mt-1">お問い合わせ A</p>
-      </div>
-    </a>
-
-    <a href="./contact-2/" class="group block bg-white rounded-lg overflow-hidden border border-[#c4c7c7] hover:shadow-md transition">
-      <div class="aspect-video bg-[#e8e8e8] overflow-hidden">
-        <img src="./contact-2/screen.png" alt="お問い合わせ B" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition" />
-      </div>
-      <div class="p-4">
-        <p class="text-xs text-[#464747] uppercase tracking-wider">contact-2</p>
-        <p class="serif text-lg mt-1">お問い合わせ B</p>
-      </div>
-    </a>
-
-    <a href="./faq/" class="group block bg-white rounded-lg overflow-hidden border border-[#c4c7c7] hover:shadow-md transition">
-      <div class="aspect-video bg-[#e8e8e8] overflow-hidden">
-        <img src="./faq/screen.png" alt="FAQ" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition" />
-      </div>
-      <div class="p-4">
-        <p class="text-xs text-[#464747] uppercase tracking-wider">faq</p>
-        <p class="serif text-lg mt-1">FAQ</p>
-      </div>
-    </a>
-
-    <a href="./commercial-disclosure/" class="group block bg-white rounded-lg overflow-hidden border border-[#c4c7c7] hover:shadow-md transition">
-      <div class="aspect-video bg-[#e8e8e8] overflow-hidden">
-        <img src="./commercial-disclosure/screen.png" alt="特商法表記 A" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition" />
-      </div>
-      <div class="p-4">
-        <p class="text-xs text-[#464747] uppercase tracking-wider">commercial-disclosure</p>
-        <p class="serif text-lg mt-1">特商法表記 A</p>
-      </div>
-    </a>
-
-    <a href="./commercial-disclosure-2/" class="group block bg-white rounded-lg overflow-hidden border border-[#c4c7c7] hover:shadow-md transition">
-      <div class="aspect-video bg-[#e8e8e8] overflow-hidden">
-        <img src="./commercial-disclosure-2/screen.png" alt="特商法表記 B" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition" />
-      </div>
-      <div class="p-4">
-        <p class="text-xs text-[#464747] uppercase tracking-wider">commercial-disclosure-2</p>
-        <p class="serif text-lg mt-1">特商法表記 B</p>
-      </div>
-    </a>
-
-    <a href="./legal-compliance/" class="group block bg-white rounded-lg overflow-hidden border border-[#c4c7c7] hover:shadow-md transition">
-      <div class="aspect-video bg-[#e8e8e8] overflow-hidden">
-        <img src="./legal-compliance/screen.png" alt="特定商取引法に基づく表記" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition" />
-      </div>
-      <div class="p-4">
-        <p class="text-xs text-[#464747] uppercase tracking-wider">legal-compliance</p>
-        <p class="serif text-lg mt-1">特定商取引法に基づく表記</p>
-      </div>
-    </a>
-  </main>
-
-  <footer class="mt-12 pt-6 border-t border-[#c4c7c7] text-xs text-[#464747]">
-    <p>Generated from Stitch mock by /stitch-deploy. Deploy with <code class="bg-[#e8e8e8] px-1 py-0.5 rounded">netlify deploy --dir=mock/</code></p>
-  </footer>
+<body class="font-body-md text-on-surface">
+<!-- TopAppBar -->
+<header class="bg-white dark:bg-stone-950 border-b border-stone-100 dark:border-stone-900 docked full-width top-0 z-50 sticky">
+<nav class="flex justify-between items-center w-full px-8 md:px-16 py-6 max-w-[1920px] mx-auto">
+<div class="flex items-center gap-12">
+<a class="text-2xl font-normal text-stone-900 dark:text-stone-50 uppercase tracking-[0.2em] font-serif" href="/">THE TEA CEREMONY</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-serif tracking-tight text-stone-900 dark:text-stone-50 border-b border-stone-900 dark:border-stone-50 pb-1 hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors duration-300" href="#">Shop</a>
+<a class="font-serif tracking-tight text-stone-500 dark:text-stone-400 pb-1 hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors duration-300" href="#">Collections</a>
+<a class="font-serif tracking-tight text-stone-500 dark:text-stone-400 pb-1 hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors duration-300" href="#">Our Story</a>
+<a class="font-serif tracking-tight text-stone-500 dark:text-stone-400 pb-1 hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors duration-300" href="#">Brewing Guide</a>
 </div>
-</body>
-</html>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-stone-900 dark:text-stone-50 scale-100 transition-transform active:scale-[0.99] hover:text-emerald-700">shopping_bag</button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[921px] flex items-center justify-center overflow-hidden bg-surface">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-90" data-alt="Minimalist top-down view of a single artisanal ceramic tea bowl on a light stone surface with subtle shadows and morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCT-wGyw8iaeePeDwO8YCxSCYDtgZtZkzAYix2e1Zjr_barFxG_LZKLSNM6QxKhHm6fzIEzRTuFuHpl2p5nuu3A5vj99B7zaSGIhh4sXrE6ubS_uk_cHqmgdCBan7M0M9AiCirUucVb3S-b9qziGCe_8zNHBvcOoZxOHZOzb9M_VGi5ma9I-ouhUQKHxorpNnQHaOXA1YhyyPP1MLIxiup18h7WgIaTNsS1VeTfzdDimRnQL3btaGVXrRMJJki-ZOfhbbfLywTewys"/>
+</div>
+<div class="relative z-10 text-center px-4 max-w-4xl">
+<span class="font-label-sm text-label-sm text-on-surface-variant mb-6 block uppercase tracking-[0.3em]">The Art of Stillness</span>
+<h1 class="font-h1 text-h1 text-on-surface mb-8">Purity in every drop, silence in every sip.</h1>
+<div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+<button class="bg-primary text-on-primary px-10 py-4 font-label-sm text-label-sm uppercase hover:bg-secondary transition-colors duration-300 active:scale-95">
+                        Discover the Collection
+                    </button>
+<button class="border border-primary text-primary px-10 py-4 font-label-sm text-label-sm uppercase hover:bg-surface-container transition-colors duration-300 active:scale-95">
+                        Our Process
+                    </button>
+</div>
+</div>
+</section>
+<!-- Philosophy / Intro -->
+<section class="py-[120px] px-8 md:px-16 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+<div>
+<h2 class="font-h2 text-h2 text-on-surface mb-8">Cultivating Ma.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    Inspired by the Japanese concept of *Ma*—the intentional space between things—our teas are sourced from single-estate harvests in Uji and Shizuoka. We believe tea is more than a beverage; it is a ritual of reclamation.
+                </p>
+</div>
+<div class="bg-surface-container p-12 aspect-square flex items-center justify-center">
+<div class="border border-outline-variant p-8 h-full w-full flex flex-col justify-center items-center text-center">
+<span class="material-symbols-outlined text-4xl mb-4 text-secondary">spa</span>
+<h3 class="font-h3 text-h3 mb-4 text-on-surface">Ceremonial Grade</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Unblended, single-origin matcha and loose leaf teas, shade-grown for depth and umami.</p>
+</div>
+</div>
+</section>
+<!-- Featured Products -->
+<section class="py-[120px] bg-white">
+<div class="max-w-[1920px] mx-auto px-8 md:px-16">
+<div class="flex justify-between items-end mb-16">
+<h2 class="font-h2 text-h2 text-on-surface uppercase tracking-tight">Seasonal Selections</h2>
+<a class="font-label-sm text-label-sm text-on-surface border-b border-primary pb-1 hover:text-secondary hover:border-secondary transition-all" href="#">View All Shop</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Product 1 -->
+<div class="group">
+<div class="aspect-[4/5] mb-8 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover grayscale-[20%] group-hover:scale-105 transition-transform duration-700" data-alt="Premium matcha powder in a black ceramic tin, surrounded by soft green tea dust on a white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfqkZoQgBN6wIUPuGhZ1-PMouQ3FmPzTdV05WCmtD1Bs3wEcV1GGQts1tWxyEmONolRcjTRzAFZRvWj5VoDUv0sg-sHNwh2aprRnKKD5UbUtcnwUaTyTAYX8Gle9Dt3cWNLqHFM_GnzMAVoqoFMKKKuDNenNpIwnAxAAQsLTjY_yy288cZgqfKjEHkO9gOjCU4r-xYWmw7UCYRpbEEe_Z8Uxqx_ILfkV1v8ZYmtABrHFpitta_lSh7LgAyOYmCkWBzSRclB1707As"/>
+</div>
+<div class="text-center">
+<span class="font-label-sm text-[10px] text-secondary mb-2 block uppercase">Uji, Kyoto</span>
+<h3 class="font-h3 text-h3 text-on-surface mb-2">Ceremonial Matcha</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">$48.00</p>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="group">
+<div class="aspect-[4/5] mb-8 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover grayscale-[20%] group-hover:scale-105 transition-transform duration-700" data-alt="Handcrafted bamboo tea whisk and scoop resting on a linen cloth, soft side lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8wBhRJkxjBgITnWFBNSgiuNUxM1NFfE6cDb0Hm2IOEJ1YTSbyvL81vSQgrmm21qoghzY15-aEmq7r6ycgewV4zvou0yzmIu8L0IfvPhpKBluX7XbBcmulXa7S9o1uSkL5TTgjlX1x9a-NAaJG97fxp1LPpmbwzD-utWBqjhH05wMiXB7HMkHtG6ZtOpZzc5mczc7rdz2PufBJHtuS1DMnZwMekv5DXuudlt3CvGEc_4OiZcswW90jbNx6L678RpqWdGK0ZQavUp8"/>
+</div>
+<div class="text-center">
+<span class="font-label-sm text-[10px] text-secondary mb-2 block uppercase">Hand-Carved</span>
+<h3 class="font-h3 text-h3 text-on-surface mb-2">Takayama Chasen</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">$65.00</p>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="group">
+<div class="aspect-[4/5] mb-8 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover grayscale-[20%] group-hover:scale-105 transition-transform duration-700" data-alt="Dried Gyokuro tea leaves showing vibrant green needle-like texture on a white porcelain dish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDe2B2JPTcbunc5kzZOj7-LuLGhyL5Lq9LmtNlu43eZX4P5MZd0J1e_KX_dcxXcDvEgAV7roTtRxI7Zy6vPXtVUGuIjbOnGEreBdEn1pbvf6PUebCTweth1mSf_SrU-Yp6Hz3vE1kp10rRTM9xzAP7GGBPN-oJbnmjWjTtQKuqRXK1r-m_4xKYYZHz6wmneBVoJCH9MZg6XAhRDdL2N_1QOCrMU4GXykM9VMOWaR76XAlx8X_6bl6pRYyXQ0aC3aU-1DxnYvImjt2U"/>
+</div>
+<div class="text-center">
+<span class="font-label-sm text-[10px] text-secondary mb-2 block uppercase">Shizuoka First Flush</span>
+<h3 class="font-h3 text-h3 text-on-surface mb-2">Imperial Gyokuro</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">$32.00</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / CTA -->
+<section class="py-[120px] bg-stone-900 text-white">
+<div class="max-w-4xl mx-auto px-8 text-center">
+<h2 class="font-h2 text-h2 mb-6">Join the Ceremony.</h2>
+<p class="font-body-lg text-stone-400 mb-12">Receive seasonal harvest updates, brewing guides, and exclusive access to limited-edition ceramic releases.</p>
+<form class="flex flex-col md:flex-row gap-4">
+<input class="flex-grow bg-transparent border-b border-stone-700 focus:border-stone-400 text-stone-100 placeholder:text-stone-600 focus:ring-0 px-0 py-4 font-label-sm text-label-sm outline-none transition-colors" placeholder="YOUR EMAIL ADDRESS" type="email"/>
+<button class="bg-white text-stone-950 px-12 py-4 font-label-sm text-label-sm uppercase hover:bg-secondary hover:text-white transition-colors duration-300" type="submit">
+                        Subscribe
+                    </button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-stone-950 border-t border-stone-200 dark:border-stone-800 w-full py-24 px-8 md:px-16 max-w-[1920px] mx-auto flex flex-col md:flex-row justify-between items-start">
+<div class="mb-12 md:mb-0">
+<div class="text-lg font-serif text-stone-900 dark:text-stone-50 mb-8 uppercase tracking-widest">THE TEA CEREMONY</div>
+<p class="font-body-md text-stone-500 max-w-xs mb-8">Crafting moments of clarity through the world's finest Japanese tea traditions.</p>
+<div class="flex gap-6">
+<a class="material-symbols-outlined text-stone-400 hover:text-secondary transition-colors" href="#">circle</a>
+<a class="material-symbols-outlined text-stone-400 hover:text-secondary transition-colors" href="#">change_history</a>
+<a class="material-symbols-outlined text-stone-400 hover:text-secondary transition-colors" href="#">square</a>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-2 gap-16">
+<div class="flex flex-col gap-4">
+<span class="font-label-sm text-stone-900 dark:text-stone-50 mb-2">EXPLORE</span>
+<a class="font-serif text-sm uppercase tracking-widest text-stone-400 dark:text-stone-500 hover:text-emerald-700 transition-colors" href="#">Shop</a>
+<a class="font-serif text-sm uppercase tracking-widest text-stone-400 dark:text-stone-500 hover:text-emerald-700 transition-colors" href="#">Our Story</a>
+<a class="font-serif text-sm uppercase tracking-widest text-stone-400 dark:text-stone-500 hover:text-emerald-700 transition-colors" href="#">Journal</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-sm text-stone-900 dark:text-stone-50 mb-2">ASSISTANCE</span>
+<a class="font-serif text-sm uppercase tracking-widest text-stone-400 dark:text-stone-500 hover:text-emerald-700 transition-colors" href="#">Privacy Policy</a>
+<a class="font-serif text-sm uppercase tracking-widest text-stone-400 dark:text-stone-500 hover:text-emerald-700 transition-colors" href="#">Shipping &amp; Returns</a>
+<a class="font-serif text-sm uppercase tracking-widest text-stone-400 dark:text-stone-500 hover:text-emerald-700 transition-colors" href="#">Wholesale</a>
+<a class="font-serif text-sm uppercase tracking-widest text-stone-400 dark:text-stone-500 hover:text-emerald-700 transition-colors" href="#">Contact</a>
+</div>
+</div>
+<div class="w-full md:w-auto mt-16 md:mt-0 flex flex-col justify-end h-full">
+<p class="font-serif text-sm uppercase tracking-widest text-stone-400 dark:text-stone-500">© 2024 THE TEA CEREMONY. PURITY IN EVERY CUP.</p>
+</div>
+</footer>
+</body></html>

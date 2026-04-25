@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#c8c6c5",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-dim": "#dadada",
+                        "tertiary": "#000000",
+                        "on-primary-container": "#858383",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "on-surface": "#1a1c1c",
+                        "on-primary": "#ffffff",
+                        "surface-container-highest": "#e2e2e2",
+                        "tertiary-fixed-dim": "#c7c6c6",
+                        "on-primary-fixed-variant": "#474646",
+                        "surface-variant": "#e2e2e2",
+                        "surface-container-low": "#f3f3f3",
+                        "secondary-fixed": "#bdf1a8",
+                        "on-surface-variant": "#444748",
+                        "surface": "#f9f9f9",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed-dim": "#a2d48f",
+                        "on-tertiary-container": "#848484",
+                        "outline": "#747878",
+                        "surface-container": "#eeeeee",
+                        "on-background": "#1a1c1c",
+                        "on-secondary-fixed": "#022100",
+                        "surface-container-high": "#e8e8e8",
+                        "primary-fixed": "#e5e2e1",
+                        "primary": "#000000",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#1c1b1b",
+                        "secondary-container": "#bdf1a8",
+                        "outline-variant": "#c4c7c7",
+                        "secondary": "#3d6930",
+                        "inverse-surface": "#2f3131",
+                        "surface-bright": "#f9f9f9",
+                        "on-error": "#ffffff",
+                        "on-secondary-container": "#426f35",
+                        "on-tertiary-fixed-variant": "#464747",
+                        "inverse-on-surface": "#f1f1f1",
+                        "background": "#f9f9f9",
+                        "surface-tint": "#5f5e5e",
+                        "on-primary-fixed": "#1c1b1b",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#25501a",
+                        "tertiary-fixed": "#e3e2e2",
+                        "tertiary-container": "#1b1c1c",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "section-padding": "120px",
+                        "element-gap": "16px"
+                    },
+                    "fontFamily": {
+                        "h3": ["Noto Serif"],
+                        "h2": ["Noto Serif"],
+                        "label-sm": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "h1": ["Noto Serif"]
+                    },
+                    "fontSize": {
+                        "h3": ["24px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                        "h2": ["36px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #ffffff;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+        }
+        input:focus {
+            outline: none;
+            border-color: #000000 !important;
+            box-shadow: none !important;
+        }
+    </style>
+</head>
+<body class="bg-surface-container-lowest text-on-surface">
+<!-- TopAppBar -->
+<header class="docked full-width top-0 border-b border-zinc-100 dark:border-zinc-900 bg-white dark:bg-zinc-950 z-50">
+<div class="max-w-7xl mx-auto px-12 py-8 flex justify-between items-center w-full">
+<a class="text-2xl font-serif tracking-[0.25em] text-zinc-900 dark:text-zinc-100 uppercase transition-all duration-700 ease-in-out" href="#">KADO TEA</a>
+<div class="flex items-center gap-8">
+<nav class="hidden md:flex gap-8">
+<a class="font-serif tracking-tight text-zinc-400 dark:text-zinc-600 hover:text-emerald-900 dark:hover:text-emerald-400 transition-colors duration-500" href="#">Return to Shop</a>
+</nav>
+<button class="text-emerald-900 dark:text-emerald-500 hover:text-emerald-900 transition-colors duration-500">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-12 py-16">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Left Column: Checkout Form -->
+<div class="lg:col-span-7">
+<!-- Stepper -->
+<nav class="flex items-center gap-4 mb-12">
+<span class="font-label-sm text-label-sm text-on-surface">Information</span>
+<span class="material-symbols-outlined text-outline">chevron_right</span>
+<span class="font-label-sm text-label-sm text-outline">Shipping</span>
+<span class="material-symbols-outlined text-outline">chevron_right</span>
+<span class="font-label-sm text-label-sm text-outline">Payment</span>
+</nav>
+<div class="space-y-12">
+<!-- Contact Section -->
+<section>
+<div class="flex justify-between items-end mb-6">
+<h2 class="font-h3 text-h3">Contact Information</h2>
+<p class="font-label-sm text-label-sm">Already have an account? <a class="underline" href="#">Log in</a></p>
+</div>
+<div class="space-y-4">
+<input class="w-full border-0 border-b border-outline-variant bg-transparent py-3 font-body-md text-body-md focus:border-primary transition-colors" placeholder="Email address" type="email"/>
+<div class="flex items-center gap-2 mt-2">
+<input class="rounded-none border-outline-variant text-primary focus:ring-0" id="newsletter" type="checkbox"/>
+<label class="font-body-md text-body-md text-on-surface-variant" for="newsletter">Keep me up to date on news and exclusive offers</label>
+</div>
+</div>
+</section>
+<!-- Shipping Section -->
+<section>
+<h2 class="font-h3 text-h3 mb-6">Shipping Address</h2>
+<div class="grid grid-cols-2 gap-4">
+<div class="col-span-2">
+<select class="w-full border-0 border-b border-outline-variant bg-transparent py-3 font-body-md text-body-md focus:border-primary appearance-none">
+<option>United States</option>
+<option>Japan</option>
+<option>United Kingdom</option>
+</select>
+</div>
+<input class="border-0 border-b border-outline-variant bg-transparent py-3 font-body-md text-body-md focus:border-primary transition-colors" placeholder="First name" type="text"/>
+<input class="border-0 border-b border-outline-variant bg-transparent py-3 font-body-md text-body-md focus:border-primary transition-colors" placeholder="Last name" type="text"/>
+<input class="col-span-2 border-0 border-b border-outline-variant bg-transparent py-3 font-body-md text-body-md focus:border-primary transition-colors" placeholder="Address" type="text"/>
+<input class="col-span-2 border-0 border-b border-outline-variant bg-transparent py-3 font-body-md text-body-md focus:border-primary transition-colors" placeholder="Apartment, suite, etc. (optional)" type="text"/>
+<input class="border-0 border-b border-outline-variant bg-transparent py-3 font-body-md text-body-md focus:border-primary transition-colors" placeholder="City" type="text"/>
+<input class="border-0 border-b border-outline-variant bg-transparent py-3 font-body-md text-body-md focus:border-primary transition-colors" placeholder="ZIP code" type="text"/>
+</div>
+</section>
+<!-- Action -->
+<div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
+<a class="font-label-sm text-label-sm flex items-center gap-2 group" href="#">
+<span class="material-symbols-outlined transition-transform group-hover:-translate-x-1">arrow_back</span>
+                            Return to Cart
+                        </a>
+<button class="w-full md:w-auto px-12 py-5 bg-secondary text-on-secondary font-label-sm text-label-sm uppercase tracking-widest hover:bg-on-secondary-container transition-colors">
+                            Proceed to Shipping
+                        </button>
+</div>
+</div>
+</div>
+<!-- Right Column: Order Summary -->
+<div class="lg:col-span-5">
+<div class="bg-surface p-8 lg:p-12 sticky top-32">
+<h2 class="font-h3 text-h3 mb-8">Order Summary</h2>
+<!-- Products -->
+<div class="space-y-6 pb-8 border-b border-outline-variant">
+<!-- Product 1 -->
+<div class="flex items-center gap-6">
+<div class="relative w-20 h-20 bg-white">
+<img class="w-full h-full object-cover" data-alt="Close-up of premium ceremonial grade matcha powder in a minimalist black tin, soft natural light on white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDp-eh6Hs9ZnCV6BdJwC1hq_NiC89nCOtTvVozg-Y-rFeuOmkovK78XcEhEMfuLJo-KY1usJ7UDklVgcuZc8bGWcikJMIHicLmzY3-fdkGpWK3ysir1hD_GSSDSEA8L0YMSr1Kasy758_EC_AjApo5UxaceXdPaVjLYrraYtpkiK918cDKt-2IFyivpvcx2zw_qC6aFCFkLtO-QT89P86tg48gFX-OikRoaH2n3IqGfLzX0MN0UiYL62RcTpmMBeFfQjNPpNHqJN30"/>
+<span class="absolute -top-2 -right-2 bg-zinc-800 text-white w-5 h-5 flex items-center justify-center text-[10px] rounded-full">1</span>
+</div>
+<div class="flex-1">
+<h3 class="font-body-md font-semibold text-on-surface">Ceremonial Grade Matcha</h3>
+<p class="font-label-sm text-on-surface-variant">30g Tin</p>
+</div>
+<p class="font-body-md">$42.00</p>
+</div>
+<!-- Product 2 -->
+<div class="flex items-center gap-6">
+<div class="relative w-20 h-20 bg-white">
+<img class="w-full h-full object-cover" data-alt="Artisanal hand-crafted Japanese ceramic tea bowl with wabi-sabi texture on a neutral stone surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDlTg01GulZSj9E4EN-bz4t-C185GNg4sPvV7JL0DxpY792x9AYc_Sz1P6S01i2Irtq3K7OsqrTUVSt67WEVIVGJcxDGCuthts1h-kn7dYBc8xPN6jj-S1eMALKkad0WCh1_BwHolKS7vW87vs9xqcwz5D1rHWlx_UhHg3u2PHkSSTKecZFZngsCmCzjKj2web78eASh_i5II_NXGxlJHd-eub1Fbgmp_Tz33NSX_1JgYmVliZij32PkwcJHk00QZIIPbtYHzh0hc"/>
+<span class="absolute -top-2 -right-2 bg-zinc-800 text-white w-5 h-5 flex items-center justify-center text-[10px] rounded-full">1</span>
+</div>
+<div class="flex-1">
+<h3 class="font-body-md font-semibold text-on-surface">Shigaraki Tea Bowl</h3>
+<p class="font-label-sm text-on-surface-variant">Cloud Grey</p>
+</div>
+<p class="font-body-md">$120.00</p>
+</div>
+</div>
+<!-- Totals -->
+<div class="py-8 space-y-4 border-b border-outline-variant">
+<div class="flex justify-between items-center">
+<span class="font-body-md text-on-surface-variant">Subtotal</span>
+<span class="font-body-md">$162.00</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-body-md text-on-surface-variant">Shipping</span>
+<span class="font-body-md text-on-surface-variant italic">Calculated at next step</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-body-md text-on-surface-variant">Estimated Tax</span>
+<span class="font-body-md">$13.36</span>
+</div>
+</div>
+<div class="pt-8 flex justify-between items-center">
+<span class="font-h3 text-h3">Total</span>
+<div class="text-right">
+<span class="font-label-sm text-on-surface-variant mr-2 uppercase">USD</span>
+<span class="font-h3 text-h3 font-bold">$175.36</span>
+</div>
+</div>
+<!-- Discount Code -->
+<div class="mt-8 flex gap-4">
+<input class="flex-1 border-0 border-b border-outline-variant bg-transparent py-3 font-body-md focus:border-primary" placeholder="Gift card or discount code" type="text"/>
+<button class="px-6 py-3 border border-outline text-on-surface font-label-sm uppercase hover:bg-zinc-100 transition-colors">Apply</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-zinc-100 dark:border-zinc-900 mt-24 bg-white dark:bg-zinc-950">
+<div class="max-w-7xl mx-auto px-12 py-16 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="font-sans text-[10px] tracking-widest uppercase text-zinc-400 dark:text-zinc-500 opacity-80 hover:opacity-100 transition-opacity">
+                © 2024 KADO TEA. THE ART OF STILLNESS.
+            </div>
+<nav class="flex gap-8">
+<a class="font-sans text-[10px] tracking-widest uppercase text-zinc-400 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300" href="#">Privacy Policy</a>
+<a class="font-sans text-[10px] tracking-widest uppercase text-zinc-400 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300" href="#">Terms of Service</a>
+<a class="font-sans text-[10px] tracking-widest uppercase text-zinc-400 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300" href="#">Shipping &amp; Returns</a>
+<a class="font-sans text-[10px] tracking-widest uppercase text-zinc-400 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300" href="#">Contact</a>
+</nav>
+</div>
+</footer>
+</body></html>

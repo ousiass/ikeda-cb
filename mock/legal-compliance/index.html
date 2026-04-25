@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&amp;family=Manrope:wght@400;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#464747",
+                    "outline": "#747878",
+                    "primary": "#000000",
+                    "surface-container-low": "#f3f3f3",
+                    "on-primary-fixed-variant": "#474646",
+                    "on-secondary": "#ffffff",
+                    "inverse-surface": "#2f3131",
+                    "primary-fixed": "#e5e2e1",
+                    "on-secondary-fixed-variant": "#25501a",
+                    "surface-container": "#eeeeee",
+                    "tertiary-fixed": "#e3e2e2",
+                    "on-tertiary-container": "#848484",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#1b1c1c",
+                    "on-primary-fixed": "#1c1b1b",
+                    "on-secondary-fixed": "#022100",
+                    "surface-bright": "#f9f9f9",
+                    "error": "#ba1a1a",
+                    "secondary-fixed-dim": "#a2d48f",
+                    "surface-container-highest": "#e2e2e2",
+                    "surface-dim": "#dadada",
+                    "surface-variant": "#e2e2e2",
+                    "tertiary-container": "#1b1c1c",
+                    "on-error-container": "#93000a",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "surface-tint": "#5f5e5e",
+                    "primary-container": "#1c1b1b",
+                    "outline-variant": "#c4c7c7",
+                    "surface": "#f9f9f9",
+                    "on-surface-variant": "#444748",
+                    "tertiary-fixed-dim": "#c7c6c6",
+                    "on-secondary-container": "#426f35",
+                    "on-background": "#1a1c1c",
+                    "inverse-on-surface": "#f1f1f1",
+                    "background": "#f9f9f9",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-surface": "#1a1c1c",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed": "#bdf1a8",
+                    "on-primary-container": "#858383",
+                    "secondary-container": "#bdf1a8",
+                    "surface-container-high": "#e8e8e8",
+                    "on-tertiary": "#ffffff",
+                    "secondary": "#3d6930",
+                    "inverse-primary": "#c8c6c5",
+                    "tertiary": "#000000"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "unit": "8px",
+                    "section-padding": "120px",
+                    "element-gap": "16px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "h3": ["Noto Serif JP", "serif"],
+                    "label-sm": ["Manrope", "sans-serif"],
+                    "body-md": ["Manrope", "sans-serif"],
+                    "body-lg": ["Manrope", "sans-serif"],
+                    "h2": ["Noto Serif JP", "serif"],
+                    "h1": ["Noto Serif JP", "serif"]
+            },
+            "fontSize": {
+                    "h3": ["24px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "h2": ["36px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                    "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #ffffff;
+            color: #1a1c1c;
+        }
+    </style>
+</head>
+<body class="font-body-md selection:bg-primary-fixed selection:text-primary">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-white border-b border-neutral-100">
+<div class="flex justify-between items-center px-12 py-10 w-full max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-12">
+<a class="text-2xl font-serif tracking-tighter text-neutral-900" href="#">KADO TEA</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-serif tracking-[0.2em] text-[10px] uppercase text-neutral-500 hover:text-emerald-900 transition-colors duration-500" href="#">COLLECTIONS</a>
+<a class="font-serif tracking-[0.2em] text-[10px] uppercase text-neutral-500 hover:text-emerald-900 transition-colors duration-500" href="#">CERAMICS</a>
+<a class="font-serif tracking-[0.2em] text-[10px] uppercase text-neutral-500 hover:text-emerald-900 transition-colors duration-500" href="#">STEEPING</a>
+<a class="font-serif tracking-[0.2em] text-[10px] uppercase text-neutral-500 hover:text-emerald-900 transition-colors duration-500" href="#">STORY</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined cursor-pointer text-neutral-900" data-icon="search">search</span>
+<span class="material-symbols-outlined cursor-pointer text-neutral-900" data-icon="shopping_bag">shopping_bag</span>
+<span class="material-symbols-outlined cursor-pointer text-neutral-900" data-icon="person">person</span>
+</div>
+</div>
+</nav>
+<main class="pt-48 pb-32 max-w-4xl mx-auto px-6">
+<!-- Hero Section -->
+<header class="mb-24 text-center">
+<p class="font-label-sm text-label-sm text-outline mb-4 uppercase tracking-[0.3em]">Legal Information</p>
+<h1 class="font-h1 text-h1 text-primary mb-6">特定商取引法に基づく表記</h1>
+<div class="w-12 h-[1px] bg-primary mx-auto"></div>
+</header>
+<!-- Compliance Table -->
+<section class="space-y-0">
+<!-- Row 1 -->
+<div class="grid grid-cols-1 md:grid-cols-3 border-b border-neutral-100 py-10">
+<div class="font-label-sm text-label-sm text-outline uppercase md:pt-1">販売業者 / Seller</div>
+<div class="md:col-span-2 mt-2 md:mt-0 font-h3 text-h3 text-primary">株式会社 KADO TEA</div>
+</div>
+<!-- Row 2 -->
+<div class="grid grid-cols-1 md:grid-cols-3 border-b border-neutral-100 py-10">
+<div class="font-label-sm text-label-sm text-outline uppercase md:pt-1">代表責任者 / Representative</div>
+<div class="md:col-span-2 mt-2 md:mt-0 font-body-lg text-body-lg text-primary">佐藤 健一 (Kenichi Sato)</div>
+</div>
+<!-- Row 3 -->
+<div class="grid grid-cols-1 md:grid-cols-3 border-b border-neutral-100 py-10">
+<div class="font-label-sm text-label-sm text-outline uppercase md:pt-1">所在地 / Address</div>
+<div class="md:col-span-2 mt-2 md:mt-0 font-body-md text-body-md text-primary leading-relaxed">
+                    〒150-0001<br/>
+                    東京都渋谷区神宮前 1-2-3 KADO青山ビル 4F
+                </div>
+</div>
+<!-- Row 4 -->
+<div class="grid grid-cols-1 md:grid-cols-3 border-b border-neutral-100 py-10">
+<div class="font-label-sm text-label-sm text-outline uppercase md:pt-1">連絡先 / Contact</div>
+<div class="md:col-span-2 mt-2 md:mt-0 space-y-4">
+<div>
+<span class="font-label-sm text-[10px] text-outline block mb-1">電話番号 / PHONE</span>
+<p class="font-body-md text-body-md text-primary">03-1234-5678</p>
+<p class="text-[11px] text-on-surface-variant mt-1 italic">※受付時間：10:00 - 18:00（土日祝を除く）</p>
+</div>
+<div>
+<span class="font-label-sm text-[10px] text-outline block mb-1">メール / EMAIL</span>
+<p class="font-body-md text-body-md text-primary border-b border-primary w-fit">support@kadotea.jp</p>
+</div>
+</div>
+</div>
+<!-- Row 5 -->
+<div class="grid grid-cols-1 md:grid-cols-3 border-b border-neutral-100 py-10">
+<div class="font-label-sm text-label-sm text-outline uppercase md:pt-1">販売価格 / Pricing</div>
+<div class="md:col-span-2 mt-2 md:mt-0 font-body-md text-body-md text-primary">
+                    各商品ページに表示された価格に基づきます（税込）。
+                </div>
+</div>
+<!-- Row 6 -->
+<div class="grid grid-cols-1 md:grid-cols-3 border-b border-neutral-100 py-10">
+<div class="font-label-sm text-label-sm text-outline uppercase md:pt-1">お支払い方法 / Payment</div>
+<div class="md:col-span-2 mt-2 md:mt-0 font-body-md text-body-md text-primary">
+<ul class="list-none space-y-2">
+<li>クレジットカード (Visa, Mastercard, American Express, JCB)</li>
+<li>Apple Pay / Google Pay</li>
+<li>銀行振込（前払い）</li>
+</ul>
+</div>
+</div>
+<!-- Row 7 -->
+<div class="grid grid-cols-1 md:grid-cols-3 border-b border-neutral-100 py-10">
+<div class="font-label-sm text-label-sm text-outline uppercase md:pt-1">引き渡し時期 / Delivery</div>
+<div class="md:col-span-2 mt-2 md:mt-0 font-body-md text-body-md text-primary leading-relaxed">
+                    ご注文確定後、通常3営業日以内に発送いたします。予約商品については商品ページに記載の納期をご確認ください。
+                </div>
+</div>
+<!-- Row 8 -->
+<div class="grid grid-cols-1 md:grid-cols-3 border-b border-neutral-100 py-10">
+<div class="font-label-sm text-label-sm text-outline uppercase md:pt-1">返品・交換 / Returns</div>
+<div class="md:col-span-2 mt-2 md:mt-0 font-body-md text-body-md text-primary leading-relaxed">
+<p class="mb-4">商品に欠陥がある場合を除き、基本的には返品には応じません。</p>
+<p>万が一、配送中の破損や商品の誤送があった場合は、商品到着後7日以内にメールにてご連絡ください。送料弊社負担にて良品と交換させていただきます。</p>
+</div>
+</div>
+</section>
+<!-- Visual Element -->
+<div class="mt-32 relative h-96 w-full bg-surface">
+<img alt="" class="w-full h-full object-cover grayscale opacity-20" data-alt="top-down artistic view of a minimal zen rock garden with raked white sand and one smooth dark stone in soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_MX2CRtCZ14rXFwK8pPvymQN3VbBIQ6mWjEP1fENG5noqvFUB2fe2gGzAQyjhuhjLRHyHBlhdp1H2Ur9wWn38VohnhVIGk0HtIRmgg9Xt0yralhoGyVY3nb8_NQdkSqIOi73x4s7iPK0K60W-XVwkeCvyLyxSr_FSaZbEvcGmay5DHjKiyfZMLPDaD7So0RoPV_Pcz1thIUvFkGsOLlLQUPlcr621QPe6MttIfEg6jxw7BvijZEG76oKRn_ZbVq9IbRgFrtYJ5n8"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<p class="font-serif italic text-h3 text-neutral-300">The Art of Stillness.</p>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full px-12 py-32 flex flex-col items-center space-y-12 bg-white border-t border-neutral-100">
+<div class="flex flex-wrap justify-center gap-12">
+<a class="font-serif text-[10px] tracking-[0.2em] uppercase text-neutral-400 hover:text-emerald-900 transition-colors duration-500" href="#">SHIPPING</a>
+<a class="font-serif text-[10px] tracking-[0.2em] uppercase text-neutral-400 hover:text-emerald-900 transition-colors duration-500" href="#">RETURNS</a>
+<a class="font-serif text-[10px] tracking-[0.2em] uppercase text-neutral-900 font-bold" href="#">PRIVACY</a>
+<a class="font-serif text-[10px] tracking-[0.2em] uppercase text-neutral-400 hover:text-emerald-900 transition-colors duration-500" href="#">CONTACT</a>
+</div>
+<p class="font-serif text-[10px] tracking-[0.2em] uppercase text-emerald-900">© 2024 KADO TEA. THE ART OF STILLNESS.</p>
+</footer>
+</body></html>

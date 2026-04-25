@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#e8e8e8",
+                        "surface-container-highest": "#e2e2e2",
+                        "secondary-fixed-dim": "#a2d48f",
+                        "on-tertiary-fixed-variant": "#464747",
+                        "inverse-primary": "#c8c6c5",
+                        "tertiary-container": "#1b1c1c",
+                        "surface-container-low": "#f3f3f3",
+                        "outline-variant": "#c4c7c7",
+                        "surface-bright": "#f9f9f9",
+                        "surface-dim": "#dadada",
+                        "on-background": "#1a1c1c",
+                        "on-secondary-fixed-variant": "#25501a",
+                        "on-primary-fixed-variant": "#474646",
+                        "surface": "#f9f9f9",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#000000",
+                        "surface-tint": "#5f5e5e",
+                        "secondary": "#3d6930",
+                        "tertiary-fixed-dim": "#c7c6c6",
+                        "surface-variant": "#e2e2e2",
+                        "on-error": "#ffffff",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-primary-container": "#858383",
+                        "on-primary-fixed": "#1c1b1b",
+                        "on-tertiary-container": "#848484",
+                        "primary-fixed": "#e5e2e1",
+                        "on-secondary-container": "#426f35",
+                        "outline": "#747878",
+                        "on-secondary-fixed": "#022100",
+                        "on-primary": "#ffffff",
+                        "background": "#f9f9f9",
+                        "surface-container": "#eeeeee",
+                        "on-surface": "#1a1c1c",
+                        "on-surface-variant": "#444748",
+                        "primary-container": "#1c1b1b",
+                        "secondary-container": "#bdf1a8",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#e3e2e2",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "inverse-surface": "#2f3131",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#bdf1a8",
+                        "on-secondary": "#ffffff",
+                        "primary": "#000000"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "element-gap": "16px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "section-padding": "120px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Manrope"],
+                        "h2": ["Noto Serif"],
+                        "body-md": ["Manrope"],
+                        "h3": ["Noto Serif"],
+                        "h1": ["Noto Serif"],
+                        "body-lg": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "h2": ["36px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "h3": ["24px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                        "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #f9f9f9;
+            color: #1a1c1c;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-stone-950 border-b border-stone-100 dark:border-stone-900">
+<div class="flex justify-between items-center w-full px-8 md:px-16 py-6 max-w-[1920px] mx-auto">
+<div class="text-2xl font-normal text-stone-900 dark:text-stone-50 uppercase tracking-[0.2em] font-serif">
+                THE TEA CEREMONY
+            </div>
+<nav class="hidden md:flex gap-10">
+<a class="font-serif text-sm uppercase tracking-widest text-stone-500 dark:text-stone-400 pb-1 hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors duration-300" href="#">Shop</a>
+<a class="font-serif text-sm uppercase tracking-widest text-stone-900 dark:text-stone-50 border-b border-stone-900 dark:border-stone-50 pb-1 hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors duration-300" href="#">Collections</a>
+<a class="font-serif text-sm uppercase tracking-widest text-stone-500 dark:text-stone-400 pb-1 hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors duration-300" href="#">Our Story</a>
+<a class="font-serif text-sm uppercase tracking-widest text-stone-500 dark:text-stone-400 pb-1 hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors duration-300" href="#">Brewing Guide</a>
+</nav>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-stone-900 dark:text-stone-50 scale-100 transition-transform active:scale-[0.99] hover:text-emerald-700" data-icon="shopping_bag">shopping_bag</button>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-24 max-w-[1920px] mx-auto px-8 md:px-16">
+<!-- Hero Title Section -->
+<div class="mb-20 text-center">
+<h1 class="font-h1 text-h1 text-primary mb-4">The Permanent Collection</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Sourced directly from artisan farmers in Uji, Shizuoka, and Yame. Each selection represents the pinnacle of seasonal craftsmanship.</p>
+</div>
+<!-- Filter & Grid Layout -->
+<div class="flex flex-col lg:flex-row gap-16">
+<!-- Sidebar Filter -->
+<aside class="w-full lg:w-64 flex-shrink-0">
+<div class="sticky top-40 space-y-12">
+<div>
+<h4 class="font-label-sm text-label-sm uppercase mb-6 border-b border-stone-200 pb-2">Category</h4>
+<ul class="space-y-4 font-body-md text-on-surface">
+<li><a class="hover:text-secondary transition-colors" href="#">All Teas</a></li>
+<li><a class="text-stone-400 hover:text-secondary transition-colors" href="#">Matcha</a></li>
+<li><a class="text-stone-400 hover:text-secondary transition-colors" href="#">Sencha</a></li>
+<li><a class="text-stone-400 hover:text-secondary transition-colors" href="#">Gyokuro</a></li>
+<li><a class="text-stone-400 hover:text-secondary transition-colors" href="#">Hojicha</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm uppercase mb-6 border-b border-stone-200 pb-2">Region</h4>
+<ul class="space-y-4 font-body-md text-on-surface">
+<li><label class="flex items-center gap-3 cursor-pointer"><input class="rounded-none border-stone-300 text-primary focus:ring-0" type="checkbox"/> <span class="text-stone-600">Uji, Kyoto</span></label></li>
+<li><label class="flex items-center gap-3 cursor-pointer"><input class="rounded-none border-stone-300 text-primary focus:ring-0" type="checkbox"/> <span class="text-stone-600">Yame, Fukuoka</span></label></li>
+<li><label class="flex items-center gap-3 cursor-pointer"><input class="rounded-none border-stone-300 text-primary focus:ring-0" type="checkbox"/> <span class="text-stone-600">Shizuoka</span></label></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm uppercase mb-6 border-b border-stone-200 pb-2">Brew Type</h4>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 border border-stone-200 font-label-sm text-[10px] text-stone-600 uppercase">Hot Brew</span>
+<span class="px-3 py-1 border border-stone-200 font-label-sm text-[10px] text-stone-600 uppercase">Cold Brew</span>
+<span class="px-3 py-1 border border-stone-200 font-label-sm text-[10px] text-stone-600 uppercase">Ceremonial</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Product Grid -->
+<div class="flex-grow">
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-20 gap-x-12">
+<!-- Product 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden bg-stone-100 mb-6">
+<img class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-105" data-alt="Close-up of vibrant green ceremonial grade matcha powder being whisked in a dark ceramic bowl with soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCXT8SXdrPAP00VzhQyWqIxmnLMT1m5GAJTWvg2rljnXGVQjHsflOHCl2ygaY1zM-hCHFqDOjjBG9P1yBzIXokJ3CXjJM4BFabp5k9rVIqtyqZwAgfg02WJgP8xQ96n7LkLg-19ZTUXr0QW8sx7hNLf8PY_Uj1c84_uQs4mq5yJOT6TsnseprwM3QSjepfhaKUeLawtLZAQp5LYztOLq7zT43C8-f1D4da3NdTMCpY_QPmz9qnuIqgdDNATCAgQlM5SlR0pCYdUsA"/>
+</div>
+<div class="text-center">
+<span class="font-label-sm text-label-sm text-secondary uppercase mb-2 block">Ceremonial Grade</span>
+<h3 class="font-h3 text-h3 text-primary mb-2">Uji Hikari Matcha</h3>
+<p class="font-body-md text-stone-500">$48.00</p>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden bg-stone-100 mb-6">
+<img class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-105" data-alt="Artisanal loose leaf sencha green tea leaves on a minimal white textured surface with elegant natural shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWWLuqukJXYrhQEigDaEzi2ie31JH8dRbT9IPA8EiC6b5AN-6C7tTbT-QBozFroyrgAUGFK9HocAyZf82l87zqjKlmoX3T8Yy_f65eWR7lwiZdHapDHfxq0cnbC2yMZl5OTmoI3UThWV3fvXCkv3uxdL6Fk-bl4MiFC1wYobx4qogUqensU3RIMrIfRMJJSi6PzcOop9aPuNxtv0tmBC2ica8Is-38lVn9uH-ISG2JKASncfYuEGNsqKeVah9BODw9o129XFAj248"/>
+</div>
+<div class="text-center">
+<span class="font-label-sm text-label-sm text-secondary uppercase mb-2 block">First Flush</span>
+<h3 class="font-h3 text-h3 text-primary mb-2">Yame Sencha No. 1</h3>
+<p class="font-body-md text-stone-500">$32.00</p>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden bg-stone-100 mb-6">
+<img class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-105" data-alt="Handcrafted dark stone teapot pouring clear amber tea into a matching cup against a minimalist neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWsVg_kj44oJVMsOeJ_Y5kPOiGinJR0yPsFZwtVJCwuLsBeiBymLDVow8_H7wjuBQizhr_wuEKRSK_Y0HYrYqjxoJQB-aB1bT8r_I2YaS4W_VIWO7RxA-Av7yA6Nd3_R6BmuBTWg3pu6hBVuQ5n9NzmkZW3kiqbKebpn4livmnxjhjF80hBFWPG2_YlQsayFb_nbAhkVtd4QN3gGyDWX4lOdclatWwL156ioWk5UEJG15U7_SiZF7BxGnQ9dQuGjG-GIzdbGr8NxU"/>
+</div>
+<div class="text-center">
+<span class="font-label-sm text-label-sm text-secondary uppercase mb-2 block">Shaded Leaf</span>
+<h3 class="font-h3 text-h3 text-primary mb-2">Imperial Gyokuro</h3>
+<p class="font-body-md text-stone-500">$64.00</p>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden bg-stone-100 mb-6">
+<img class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-105" data-alt="Roasted brown hojicha tea leaves in a simple wooden bowl with a rustic aesthetic and warm directional lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQfF74QdJZOOqr7BVQGdpy8VhDSryHq-toH4Xnk-AZrnAEE8wGG7_H5-2kT8Y73_x40IOY1gp03Rv8z3tqcvqb17pv23-lDOgZRP48oksrYKzR7lU2BGqrjvy9J8eK74_ZPkdmvitQMmV3cOY7xYo_vokXgs7GrANUurq5MLD7cl_dQrvYNlICy_cZdt6bzmKmliWVy7fa3JF57rh9shC3lxfL6rpQYZWKkjxgc42lyA1ZoMkKJwtBDgaK5KR__7v9Sal7dHhQzlk"/>
+</div>
+<div class="text-center">
+<span class="font-label-sm text-label-sm text-secondary uppercase mb-2 block">Roasted</span>
+<h3 class="font-h3 text-h3 text-primary mb-2">Dark Roast Hojicha</h3>
+<p class="font-body-md text-stone-500">$26.00</p>
+</div>
+</div>
+<!-- Product 5 -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden bg-stone-100 mb-6">
+<img class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-105" data-alt="Minimalist overhead shot of varied dry tea leaves and ceramic vessels arranged in an artistic, airy composition" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYE3rPVkb4IyOZnbaMOTkYpnlTNRWxo1XuH5aApOYYoeTvm7vQ-lH_Lq2w3uq4Tk4FMKfvqp-2aw6cRZ25_SI4meRfT29ykrwE1H4zeqY7qouuNbp-D59C7KVD7KggMM37DVkxZdIt6GGJIhu2UC_sXMUmup0shzGIBorZxmLBWLopHijN4Ta10yOauquA4GbnsSVVleGhAztjnyKF9dYWOEs5rG5JN-Ry5IYdSAU3DZUYExpZIPwdEH_a_3-9z5YXQtQ9iZwhoUU"/>
+</div>
+<div class="text-center">
+<span class="font-label-sm text-label-sm text-secondary uppercase mb-2 block">Collection Exclusive</span>
+<h3 class="font-h3 text-h3 text-primary mb-2">Spring Harvest Sampler</h3>
+<p class="font-body-md text-stone-500">$85.00</p>
+</div>
+</div>
+<!-- Empty State / Coming Soon Placeholder -->
+<div class="flex flex-col items-center justify-center border border-dashed border-stone-300 aspect-[4/5]">
+<p class="font-serif italic text-stone-400">Next harvest arriving June 2024</p>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-24 flex justify-center items-center gap-8 border-t border-stone-100 pt-12">
+<button class="font-label-sm text-label-sm uppercase text-stone-400 hover:text-primary transition-colors">Previous</button>
+<div class="flex gap-4">
+<span class="font-label-sm text-label-sm text-primary">01</span>
+<span class="font-label-sm text-label-sm text-stone-300">02</span>
+<span class="font-label-sm text-label-sm text-stone-300">03</span>
+</div>
+<button class="font-label-sm text-label-sm uppercase text-primary hover:text-secondary transition-colors">Next</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-24 px-8 md:px-16 max-w-[1920px] mx-auto flex flex-col md:flex-row justify-between items-start bg-white dark:bg-stone-950 border-t border-stone-200 dark:border-stone-800">
+<div class="mb-12 md:mb-0">
+<div class="text-lg font-serif text-stone-900 dark:text-stone-50 mb-8 uppercase tracking-widest">
+                THE TEA CEREMONY
+            </div>
+<p class="font-body-md text-stone-500 max-w-xs mb-8">Elevating the daily ritual through pure, single-origin Japanese teas.</p>
+<div class="flex gap-4">
+<a class="material-symbols-outlined text-stone-400 hover:text-emerald-700 transition-colors" data-icon="share" href="#">share</a>
+<a class="material-symbols-outlined text-stone-400 hover:text-emerald-700 transition-colors" data-icon="mail" href="#">mail</a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-16">
+<div>
+<h5 class="font-label-sm text-label-sm uppercase text-stone-900 dark:text-stone-50 mb-6">Explore</h5>
+<ul class="space-y-4">
+<li><a class="font-serif text-sm uppercase tracking-widest text-stone-400 dark:text-stone-500 hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="font-serif text-sm uppercase tracking-widest text-stone-400 dark:text-stone-500 hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors" href="#">Shipping &amp; Returns</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-sm text-label-sm uppercase text-stone-900 dark:text-stone-50 mb-6">Business</h5>
+<ul class="space-y-4">
+<li><a class="font-serif text-sm uppercase tracking-widest text-stone-400 dark:text-stone-500 hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors" href="#">Wholesale</a></li>
+<li><a class="font-serif text-sm uppercase tracking-widest text-stone-400 dark:text-stone-500 hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-16 md:mt-0 md:text-right">
+<p class="font-serif text-sm uppercase tracking-widest text-stone-400 mb-4">© 2024 THE TEA CEREMONY. PURITY IN EVERY CUP.</p>
+<div class="flex md:justify-end gap-2">
+<div class="w-8 h-5 bg-stone-100 rounded-sm"></div>
+<div class="w-8 h-5 bg-stone-100 rounded-sm"></div>
+<div class="w-8 h-5 bg-stone-100 rounded-sm"></div>
+</div>
+</div>
+</footer>
+</body></html>

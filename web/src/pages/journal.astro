@@ -1,0 +1,96 @@
+---
+import PageLayout from '../components/templates/PageLayout.astro';
+
+const articles = [
+  {
+    image:
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuCfqkZoQgBN6wIUPuGhZ1-PMouQ3FmPzTdV05WCmtD1Bs3wEcV1GGQts1tWxyEmONolRcjTRzAFZRvWj5VoDUv0sg-sHNwh2aprRnKKD5UbUtcnwUaTyTAYX8Gle9Dt3cWNLqHFM_GnzMAVoqoFMKKKuDNenNpIwnAxAAQsLTjY_yy288cZgqfKjEHkO9gOjCU4r-xYWmw7UCYRpbEEe_Z8Uxqx_ILfkV1v8ZYmtABrHFpitta_lSh7LgAyOYmCkWBzSRclB1707As',
+    category: 'RITUAL',
+    title: 'A morning bowl of matcha',
+    excerpt: 'Why the first whisk of the day shapes the hours that follow at the Ikeda Senchado tea room.',
+    date: 'March 2026',
+  },
+  {
+    image:
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuC8wBhRJkxjBgITnWFBNSgiuNUxM1NFfE6cDb0Hm2IOEJ1YTSbyvL81vSQgrmm21qoghzY15-aEmq7r6ycgewV4zvou0yzmIu8L0IfvPhpKBluX7XbBcmulXa7S9o1uSkL5TTgjlX1x9a-NAaJG97fxp1LPpmbwzD-utWBqjhH05wMiXB7HMkHtG6ZtOpZzc5mczc7rdz2PufBJHtuS1DMnZwMekv5DXuudlt3CvGEc_4OiZcswW90jbNx6L678RpqWdGK0ZQavUp8',
+    category: 'ORIGIN',
+    title: 'Walking the fields of Uji',
+    excerpt: 'Notes from a slow afternoon among the shaded hillsides where Ikeda Senchado was founded.',
+    date: 'February 2026',
+  },
+  {
+    image:
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuDe2B2JPTcbunc5kzZOj7-LuLGhyL5Lq9LmtNlu43eZX4P5MZd0J1e_KX_dcxXcDvEgAV7roTtRxI7Zy6vPXtVUGuIjbOnGEreBdEn1pbvf6PUebCTweth1mSf_SrU-Yp6Hz3vE1kp10rRTM9xzAP7GGBPN-oJbnmjWjTtQKuqRXK1r-m_4xKYYZHz6wmneBVoJCH9MZg6XAhRDdL2N_1QOCrMU4GXykM9VMOWaR76XAlx8X_6bl6pRYyXQ0aC3aU-1DxnYvImjt2U',
+    category: 'RECIPE',
+    title: 'Cold-brewed gyokuro for summer',
+    excerpt: 'A patient overnight method that lets the leaf release its sweetness without a single ember of heat.',
+    date: 'January 2026',
+  },
+  {
+    image:
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuBCXT8SXdrPAP00VzhQyWqIxmnLMT1m5GAJTWvg2rljnXGVQjHsflOHCl2ygaY1zM-hCHFqDOjjBG9P1yBzIXokJ3CXjJM4BFabp5k9rVIqtyqZwAgfg02WJgP8xQ96n7LkLg-19ZTUXr0QW8sx7hNLf8PY_Uj1c84_uQs4mq5yJOT6TsnseprwM3QSjepfhaKUeLawtLZAQp5LYztOLq7zT43C8-f1D4da3NdTMCpY_QPmz9qnuIqgdDNATCAgQlM5SlR0pCYdUsA',
+    category: 'RITUAL',
+    title: 'On Ma, the space between sips',
+    excerpt: 'Reflections on intentional silence, and the way an empty cup can speak as loudly as a full one.',
+    date: 'December 2025',
+  },
+  {
+    image:
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuBYE3rPVkb4IyOZnbaMOTkYpnlTNRWxo1XuH5aApOYYoeTvm7vQ-lH_Lq2w3uq4Tk4FMKfvqp-2aw6cRZ25_SI4meRfT29ykrwE1H4zeqY7qouuNbp-D59C7KVD7KggMM37DVkxZdIt6GGJIhu2UC_sXMUmup0shzGIBorZxmLBWLopHijN4Ta10yOauquA4GbnsSVVleGhAztjnyKF9dYWOEs5rG5JN-Ry5IYdSAU3DZUYExpZIPwdEH_a_3-9z5YXQtQ9iZwhoUU',
+    category: 'ORIGIN',
+    title: 'The first flush in Yame',
+    excerpt: 'A grower in Fukuoka shares what makes the earliest leaves of spring worth the long, cold wait.',
+    date: 'November 2025',
+  },
+  {
+    image:
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuDQfF74QdJZOOqr7BVQGdpy8VhDSryHq-toH4Xnk-AZrnAEE8wGG7_H5-2kT8Y73_x40IOY1gp03Rv8z3tqcvqb17pv23-lDOgZRP48oksrYKzR7lU2BGqrjvy9J8eK74_ZPkdmvitQMmV3cOY7xYo_vokXgs7GrANUurq5MLD7cl_dQrvYNlICy_cZdt6bzmKmliWVy7fa3JF57rh9shC3lxfL6rpQYZWKkjxgc42lyA1ZoMkKJwtBDgaK5KR__7v9Sal7dHhQzlk',
+    category: 'RECIPE',
+    title: 'Hojicha latte, gently',
+    excerpt: 'Roasted leaves, warm milk, and the kind of quiet evening that asks for nothing more.',
+    date: 'October 2025',
+  },
+];
+---
+
+<PageLayout title="Journal | Ikeda Senchado">
+  <!-- Hero -->
+  <section class="max-w-[1280px] mx-auto px-12 pt-32 pb-20 text-center">
+    <span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.3em] mb-4 block">Journal</span>
+    <h1 class="font-h1 text-h1 text-primary mb-6">Notes from the tea room.</h1>
+    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+      Essays, recipes, and field notes from the growers, brewers, and ceramicists shaping Ikeda Senchado.
+    </p>
+  </section>
+
+  <!-- Article Grid -->
+  <section class="max-w-[1280px] mx-auto px-12 pb-[120px]">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+      {
+        articles.map((article) => (
+          <article class="group flex flex-col">
+            <a href="#" class="block aspect-[4/5] overflow-hidden mb-6 bg-surface-container">
+              <img
+                alt=""
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                src={article.image}
+              />
+            </a>
+            <span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.3em] mb-3">
+              {article.category}
+            </span>
+            <h2 class="font-h3 text-h3 text-on-surface mb-3 group-hover:text-secondary transition-colors">
+              <a href="#">{article.title}</a>
+            </h2>
+            <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-4">
+              {article.excerpt}
+            </p>
+            <span class="font-label-sm text-label-sm text-outline uppercase tracking-widest mt-auto">
+              {article.date}
+            </span>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</PageLayout>

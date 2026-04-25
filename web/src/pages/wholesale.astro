@@ -1,0 +1,84 @@
+---
+import PageLayout from '../components/templates/PageLayout.astro';
+import Button from '../components/atoms/Button.astro';
+import FormField from '../components/atoms/FormField.astro';
+import Icon from '../components/atoms/Icon.astro';
+---
+
+<PageLayout title="Wholesale Partnerships | Ikeda Senchado">
+  <div class="max-w-[1440px] mx-auto px-12">
+    <!-- Hero -->
+    <section class="py-[120px] flex flex-col items-center text-center">
+      <span class="font-label-sm text-label-sm text-secondary tracking-[0.3em] mb-4 uppercase">For Tea Houses, Cafés, and Retailers</span>
+      <h1 class="font-h1 text-h1 text-primary mb-6">Wholesale Partnerships</h1>
+      <p class="font-body-lg text-body-lg text-on-tertiary-container max-w-2xl">
+        Share the spirit of Uji with your guests. We partner with a select number of independent tea
+        houses, specialty cafés, and curated retailers who honor the same care for craft and origin.
+      </p>
+    </section>
+
+    <!-- Why Partner -->
+    <section class="pb-32">
+      <div class="border-b border-outline-variant pb-4 mb-10">
+        <h2 class="font-h2 text-h2 text-primary">Why Partner With Us</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div class="bg-surface-container-low p-12 border border-outline-variant flex flex-col">
+          <Icon name="local_florist" class="text-secondary text-4xl mb-6" />
+          <h3 class="font-h3 text-h3 mb-4">Single-Estate Sourcing</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant">
+            All teas are traceable to a single farm in Uji or Shizuoka. We share full provenance,
+            harvest dates, and cultivar details for every shipment.
+          </p>
+        </div>
+        <div class="bg-surface-container-low p-12 border border-outline-variant flex flex-col">
+          <Icon name="inventory_2" class="text-secondary text-4xl mb-6" />
+          <h3 class="font-h3 text-h3 mb-4">Bulk Pricing</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant">
+            Tiered wholesale pricing begins at 30% off retail. Orders over ¥100,000 receive
+            complimentary international freight and a dedicated account manager.
+          </p>
+        </div>
+        <div class="bg-surface-container-low p-12 border border-outline-variant flex flex-col">
+          <Icon name="auto_awesome" class="text-secondary text-4xl mb-6" />
+          <h3 class="font-h3 text-h3 mb-4">Marketing Support</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant">
+            Co-branded sampler kits, staff brewing workshops, and high-resolution product photography
+            available for partners who order quarterly.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Inquiry Form -->
+    <section class="pb-[120px]">
+      <div class="border-b border-outline-variant pb-4 mb-10">
+        <h2 class="font-h2 text-h2 text-primary">Partnership Inquiry</h2>
+        <p class="font-body-md text-body-md text-on-surface-variant mt-4 max-w-2xl">
+          Tell us about your business. Our partnership team will respond within 3 business days.
+        </p>
+      </div>
+      <form class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl">
+        <FormField name="company" placeholder="Company / Establishment Name" required autocomplete="organization" />
+        <FormField name="contactName" placeholder="Contact Name" required autocomplete="name" />
+        <FormField name="email" type="email" placeholder="Business Email" required autocomplete="email" />
+        <FormField name="phone" type="tel" placeholder="Phone (optional)" autocomplete="tel" />
+        <FormField name="country" placeholder="Country / Region" class="md:col-span-2" />
+        <div class="md:col-span-2">
+          <label class="block">
+            <span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Tell us about your business</span>
+            <textarea
+              name="message"
+              rows="5"
+              required
+              class="w-full bg-transparent border-0 border-b border-outline-variant py-4 focus:ring-0 focus:border-secondary transition-colors font-body-md text-body-md px-0 resize-none"
+              placeholder="Type, location, customer profile, anticipated volume..."></textarea>
+          </label>
+        </div>
+        <div class="md:col-span-2 flex justify-center pt-8">
+          <Button variant="primary" as="button" type="submit">Submit Inquiry</Button>
+        </div>
+      </form>
+    </section>
+  </div>
+</PageLayout>

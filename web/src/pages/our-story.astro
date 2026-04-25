@@ -1,0 +1,117 @@
+---
+import PageLayout from '../components/templates/PageLayout.astro';
+import Icon from '../components/atoms/Icon.astro';
+import Button from '../components/atoms/Button.astro';
+
+const milestones = [
+  {
+    year: '1923',
+    title: 'A Family Begins',
+    text: 'The Ikeda family opens a modest tea house in Uji, Kyoto, sourcing leaves from neighbouring shaded fields.',
+  },
+  {
+    year: '1968',
+    title: 'Stone-Ground Mastery',
+    text: 'A second generation refines stone-grinding methods, producing matcha for temple ceremonies across Kansai.',
+  },
+  {
+    year: '2024',
+    title: 'Senchado Today',
+    text: 'Ikeda Senchado partners with single-estate growers in Uji, Yame, and Shizuoka, sharing tea with the world.',
+  },
+];
+---
+
+<PageLayout title="Our Story | Ikeda Senchado">
+  <!-- Hero -->
+  <section class="relative h-[640px] flex items-center justify-center overflow-hidden bg-surface">
+    <div class="absolute inset-0 z-0">
+      <img
+        class="w-full h-full object-cover opacity-90"
+        alt=""
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCT-wGyw8iaeePeDwO8YCxSCYDtgZtZkzAYix2e1Zjr_barFxG_LZKLSNM6QxKhHm6fzIEzRTuFuHpl2p5nuu3A5vj99B7zaSGIhh4sXrE6ubS_uk_cHqmgdCBan7M0M9AiCirUucVb3S-b9qziGCe_8zNHBvcOoZxOHZOzb9M_VGi5ma9I-ouhUQKHxorpNnQHaOXA1YhyyPP1MLIxiup18h7WgIaTNsS1VeTfzdDimRnQL3btaGVXrRMJJki-ZOfhbbfLywTewys"
+      />
+    </div>
+    <div class="relative z-10 text-center px-4 max-w-3xl">
+      <span class="font-label-sm text-label-sm text-on-surface-variant mb-6 block uppercase tracking-[0.3em]">
+        Our Story
+      </span>
+      <h1 class="font-h1 text-h1 text-on-surface mb-8">A century steeped in stillness.</h1>
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+        Ikeda Senchado has tended tea fields and shared cups in Uji for over one hundred years. Our story is one
+        of patient hands and quiet rooms.
+      </p>
+    </div>
+  </section>
+
+  <!-- Our Heritage -->
+  <section class="py-[120px] px-8 md:px-16 max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+    <div>
+      <span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.3em] mb-4 block">Our Heritage</span>
+      <h2 class="font-h2 text-h2 text-on-surface mb-8">Rooted in Uji, Kyoto.</h2>
+      <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-6">
+        The mists of Uji have nurtured Japanese tea since the twelfth century. Among these terraced hillsides,
+        Ikeda Senchado was founded in 1923 as a small family tea house, dedicated to the unhurried craft of
+        sencha and ceremonial matcha.
+      </p>
+      <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        Four generations later, we still walk the same fields, harvest by hand, and shade-grow our cultivars
+        beneath rice straw. Tradition is not a museum piece for us; it is a daily discipline.
+      </p>
+    </div>
+    <div class="relative aspect-[4/5] bg-surface-container overflow-hidden">
+      <img
+        alt=""
+        class="object-cover w-full h-full opacity-90"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUToAzJJWr7-1h72s5yrYavNqrEoJhkmd3Lz4vUOf2bgaB1yTlDJXcNezx1qQ0_uRBaHejHEooxB1rBf1yU7hZuX_cV2oRsvV9DWO3RqJ6veS9v6MpZC3QtBWd__5oSU8adY9KQxwlcIE_dkeRsU1iW4qdWxb8ACPSjNeUz8dMjaaj0VCPnfuf1CYOZfChbkuG9fbnTGvRwgHz_5YIso41by3L3BNSzyNXPADWfNAycoUHmk_TAx_zwEOhgNnjBUvU0Sc9DJJFmq4"
+      />
+    </div>
+  </section>
+
+  <!-- Our Philosophy -->
+  <section class="py-[120px] bg-background">
+    <div class="max-w-[1280px] mx-auto px-8 md:px-16 text-center">
+      <span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.3em] mb-4 block">Our Philosophy</span>
+      <h2 class="font-h2 text-h2 text-on-surface mb-8">The practice of <em class="font-serif italic">Ma</em>.</h2>
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto leading-relaxed mb-12">
+        <em class="font-serif italic">Ma</em> is the Japanese concept of intentional space — the silence between
+        notes, the pause between breaths, the room a single cup creates for thought. Every tea we offer is shaped
+        to invite this stillness.
+      </p>
+      <div class="inline-flex flex-col items-center">
+        <Icon name="spa" class="text-secondary text-4xl mb-4" />
+        <p class="font-body-md text-body-md text-on-surface-variant italic max-w-md">
+          Tea is not merely brewed; it is permitted to unfold.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Milestones -->
+  <section class="py-[120px] max-w-[1280px] mx-auto px-8 md:px-16">
+    <div class="text-center mb-20">
+      <span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.3em] mb-4 block">Milestones</span>
+      <h2 class="font-h2 text-h2 text-on-surface">A patient century.</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+      {
+        milestones.map((m) => (
+          <article class="border border-outline-variant p-12 flex flex-col">
+            <span class="font-h3 text-h3 text-secondary mb-6">{m.year}</span>
+            <h3 class="font-h3 text-h3 text-on-surface mb-4">{m.title}</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">{m.text}</p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="border-t border-outline-variant py-[120px] flex flex-col items-center px-8">
+    <h3 class="font-h2 text-h2 text-on-surface mb-6 text-center">Begin your own ritual.</h3>
+    <p class="font-body-md text-body-md text-on-surface-variant mb-10 text-center max-w-lg">
+      Discover teas hand-picked by the Ikeda family, ready to be shared with patient hands.
+    </p>
+    <Button variant="primary" as="a" href="/collection/">Explore the Collection</Button>
+  </section>
+</PageLayout>

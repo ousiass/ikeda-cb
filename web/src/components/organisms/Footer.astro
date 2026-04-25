@@ -1,0 +1,78 @@
+---
+import Icon from '../atoms/Icon.astro';
+
+const year = new Date().getFullYear();
+
+const exploreLinks = [
+  { label: 'Shop', href: '/collection/' },
+  { label: 'Our Story', href: '#' },
+  { label: 'Journal', href: '#' },
+];
+
+const assistanceLinks = [
+  { label: 'Privacy Policy', href: '#' },
+  { label: 'Shipping & Returns', href: '#' },
+  { label: 'Wholesale', href: '#' },
+  { label: 'Contact', href: '/contact/' },
+  { label: 'Commercial Disclosure', href: '/commercial-disclosure/' },
+];
+---
+
+<footer
+  class="bg-white border-t border-outline-variant w-full py-24 px-8 md:px-16 max-w-[1920px] mx-auto flex flex-col md:flex-row justify-between items-start"
+>
+  <div class="mb-12 md:mb-0">
+    <div class="text-lg font-serif text-on-surface mb-8 uppercase tracking-widest">
+      Ikeda Senchado
+    </div>
+    <p class="font-body-md text-body-md text-on-surface-variant max-w-xs mb-8">
+      Crafting moments of clarity through the world's finest Japanese tea traditions.
+    </p>
+    <div class="flex gap-6">
+      <a href="#" aria-label="Social 1" class="text-outline hover:text-secondary transition-colors">
+        <Icon name="circle" />
+      </a>
+      <a href="#" aria-label="Social 2" class="text-outline hover:text-secondary transition-colors">
+        <Icon name="change_history" />
+      </a>
+      <a href="#" aria-label="Social 3" class="text-outline hover:text-secondary transition-colors">
+        <Icon name="square" />
+      </a>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-2 md:grid-cols-2 gap-16">
+    <div class="flex flex-col gap-4">
+      <span class="font-label-sm text-label-sm text-on-surface mb-2">EXPLORE</span>
+      {
+        exploreLinks.map((link) => (
+          <a
+            href={link.href}
+            class="font-serif text-sm uppercase tracking-widest text-outline hover:text-secondary transition-colors"
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </div>
+    <div class="flex flex-col gap-4">
+      <span class="font-label-sm text-label-sm text-on-surface mb-2">ASSISTANCE</span>
+      {
+        assistanceLinks.map((link) => (
+          <a
+            href={link.href}
+            class="font-serif text-sm uppercase tracking-widest text-outline hover:text-secondary transition-colors"
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </div>
+  </div>
+
+  <div class="w-full md:w-auto mt-16 md:mt-0 flex flex-col justify-end h-full">
+    <p class="font-serif text-sm uppercase tracking-widest text-outline">
+      © {year} Ikeda Senchado. Purity in every cup.
+    </p>
+  </div>
+</footer>

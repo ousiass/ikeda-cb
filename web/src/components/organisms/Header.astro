@@ -1,0 +1,68 @@
+---
+import Icon from '../atoms/Icon.astro';
+
+interface NavItem {
+  label: string;
+  href: string;
+  active?: boolean;
+}
+
+interface Props {
+  activePage?: string;
+  cartCount?: number;
+}
+
+const { activePage, cartCount } = Astro.props;
+
+const navItems: NavItem[] = [
+  { label: 'Shop', href: '/collection/' },
+  { label: 'Collections', href: '/collection/' },
+  { label: 'Our Story', href: '#' },
+  { label: 'Brewing Guide', href: '#' },
+];
+---
+
+<header class="bg-white border-b border-outline-variant sticky top-0 z-50">
+  <nav class="flex justify-between items-center w-full px-8 md:px-16 py-6 max-w-[1920px] mx-auto">
+    <div class="flex items-center gap-12">
+      <a
+        href="/"
+        class="text-2xl font-normal text-on-surface uppercase tracking-[0.2em] font-serif"
+      >
+        Ikeda Senchado
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        {
+          navItems.map((item) => (
+            <a
+              href={item.href}
+              class:list={[
+                'font-serif tracking-tight pb-1 hover:text-secondary transition-colors duration-300',
+                activePage === item.label
+                  ? 'text-on-surface border-b border-on-surface'
+                  : 'text-on-surface-variant',
+              ]}
+            >
+              {item.label}
+            </a>
+          ))
+        }
+      </div>
+    </div>
+    <div class="flex items-center gap-6">
+      <a href="/account/" aria-label="Account" class="text-on-surface hover:text-secondary transition-colors">
+        <Icon name="person" />
+      </a>
+      <a href="/cart/" aria-label="Cart" class="relative text-on-surface hover:text-secondary transition-colors">
+        <Icon name="shopping_bag" />
+        {
+          cartCount !== undefined && cartCount > 0 && (
+            <span class="absolute -top-2 -right-3 bg-secondary text-on-secondary text-[10px] font-label-sm rounded-full w-4 h-4 flex items-center justify-center">
+              {cartCount}
+            </span>
+          )
+        }
+      </a>
+    </div>
+  </nav>
+</header>

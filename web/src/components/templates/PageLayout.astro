@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../organisms/Header.astro';
+import Footer from '../organisms/Footer.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  activePage?: string;
+  cartCount?: number;
+  hideHeader?: boolean;
+  hideFooter?: boolean;
+}
+
+const { title, description, activePage, cartCount, hideHeader = false, hideFooter = false } =
+  Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  {!hideHeader && <Header activePage={activePage} cartCount={cartCount} />}
+  <main>
+    <slot />
+  </main>
+  {!hideFooter && <Footer />}
+</BaseLayout>

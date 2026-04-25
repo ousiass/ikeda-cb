@@ -1,0 +1,62 @@
+---
+import Button from '../atoms/Button.astro';
+
+interface Row {
+  label: string;
+  value: string;
+}
+
+interface Props {
+  rows: Row[];
+  total: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+  footnote?: string;
+  title?: string;
+  class?: string;
+}
+
+const {
+  rows,
+  total,
+  ctaLabel,
+  ctaHref,
+  footnote,
+  title = 'Summary',
+  class: className = '',
+} = Astro.props;
+---
+
+<aside class:list={['lg:w-96', className]}>
+  <div class="bg-white p-12 sticky top-40">
+    <h2 class="font-h2 text-h3 mb-8">{title}</h2>
+    <div class="space-y-4 mb-8">
+      {
+        rows.map((row) => (
+          <div class="flex justify-between">
+            <span class="font-label-sm text-label-sm text-on-surface-variant uppercase">{row.label}</span>
+            <span class="font-body-md text-body-md">{row.value}</span>
+          </div>
+        ))
+      }
+    </div>
+    <div class="border-t border-outline-variant pt-8 mb-12">
+      <div class="flex justify-between">
+        <span class="font-label-sm text-label-sm text-on-surface uppercase">Total</span>
+        <span class="font-h3 text-h3">{total}</span>
+      </div>
+    </div>
+    {
+      ctaLabel && (
+        <Button variant="primary" as={ctaHref ? 'a' : 'button'} href={ctaHref} fullWidth>
+          {ctaLabel}
+        </Button>
+      )
+    }
+    {
+      footnote && (
+        <p class="mt-8 text-center font-label-sm text-label-sm text-outline uppercase">{footnote}</p>
+      )
+    }
+  </div>
+</aside>

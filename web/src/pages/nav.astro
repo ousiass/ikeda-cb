@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const pages = [
+  { label: 'ホーム', title: 'Home', href: '/' },
+  { label: 'コレクション', title: 'Collection', href: '/collection/' },
+  { label: '商品詳細', title: 'Product', href: '/product/' },
+  { label: 'カート', title: 'Cart', href: '/cart/' },
+  { label: 'チェックアウト', title: 'Checkout', href: '/checkout/' },
+  { label: '注文完了', title: 'Order Confirmation', href: '/order-confirmation/' },
+  { label: 'アカウント', title: 'Account', href: '/account/' },
+  { label: 'お問い合わせ', title: 'Contact', href: '/contact/' },
+  { label: 'お問い合わせ (2)', title: 'Contact 2', href: '/contact-2/' },
+  { label: 'FAQ', title: 'FAQ', href: '/faq/' },
+  { label: '特定商取引法', title: 'Commercial Disclosure', href: '/commercial-disclosure/' },
+  { label: '特定商取引法 (2)', title: 'Commercial Disclosure 2', href: '/commercial-disclosure-2/' },
+  { label: '特定商取引法 (日本語)', title: 'Legal Compliance', href: '/legal-compliance/' },
+];
+---
+
+<BaseLayout title="Page Index | Ikeda Senchado">
+  <main class="max-w-7xl mx-auto px-8 md:px-16 py-24">
+    <header class="mb-16">
+      <p class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-4">Engineering Index</p>
+      <h1 class="font-h1 text-h1 text-on-surface mb-4">Ikeda Senchado — All Pages</h1>
+      <p class="font-body-md text-body-md text-on-surface-variant">
+        A quick-access index for every page in the site.
+      </p>
+    </header>
+
+    <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {
+        pages.map((page) => (
+          <li>
+            <a
+              href={page.href}
+              class="block p-8 bg-white border border-outline-variant hover:border-secondary transition-colors h-full"
+            >
+              <p class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-3">
+                {page.title}
+              </p>
+              <h2 class="font-h3 text-h3 text-on-surface mb-4">{page.label}</h2>
+              <p class="font-body-md text-sm text-on-surface-variant font-mono">{page.href}</p>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </main>
+</BaseLayout>

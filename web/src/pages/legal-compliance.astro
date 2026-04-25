@@ -1,0 +1,96 @@
+---
+import PageLayout from '../components/templates/PageLayout.astro';
+---
+
+<PageLayout title="特定商取引法に基づく表記 | Ikeda Senchado">
+  <div class="pt-48 pb-32 max-w-4xl mx-auto px-6">
+    <!-- Hero Section -->
+    <header class="mb-24 text-center">
+      <p class="font-label-sm text-label-sm text-outline mb-4 uppercase tracking-[0.3em]">Legal Information</p>
+      <h1 class="font-h1 text-h1 text-primary mb-6">特定商取引法に基づく表記</h1>
+      <div class="w-12 h-[1px] bg-primary mx-auto"></div>
+    </header>
+
+    <!-- Compliance Table -->
+    <section class="space-y-0">
+      <div class="grid grid-cols-1 md:grid-cols-3 border-b border-neutral-100 py-10">
+        <div class="font-label-sm text-label-sm text-outline uppercase md:pt-1">販売業者 / Seller</div>
+        <div class="md:col-span-2 mt-2 md:mt-0 font-h3 text-h3 text-primary">株式会社 Ikeda Senchado</div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 border-b border-neutral-100 py-10">
+        <div class="font-label-sm text-label-sm text-outline uppercase md:pt-1">代表責任者 / Representative</div>
+        <div class="md:col-span-2 mt-2 md:mt-0 font-body-lg text-body-lg text-primary">
+          佐藤 健一 (Kenichi Sato)
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 border-b border-neutral-100 py-10">
+        <div class="font-label-sm text-label-sm text-outline uppercase md:pt-1">所在地 / Address</div>
+        <div class="md:col-span-2 mt-2 md:mt-0 font-body-md text-body-md text-primary leading-relaxed">
+          〒150-0001<br />
+          東京都渋谷区神宮前 1-2-3 Ikeda青山ビル 4F
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 border-b border-neutral-100 py-10">
+        <div class="font-label-sm text-label-sm text-outline uppercase md:pt-1">連絡先 / Contact</div>
+        <div class="md:col-span-2 mt-2 md:mt-0 space-y-4">
+          <div>
+            <span class="font-label-sm text-[10px] text-outline block mb-1">電話番号 / PHONE</span>
+            <p class="font-body-md text-body-md text-primary">03-1234-5678</p>
+            <p class="text-[11px] text-on-surface-variant mt-1 italic">
+              ※受付時間：10:00 - 18:00（土日祝を除く）
+            </p>
+          </div>
+          <div>
+            <span class="font-label-sm text-[10px] text-outline block mb-1">メール / EMAIL</span>
+            <p class="font-body-md text-body-md text-primary border-b border-primary w-fit">
+              support@ikedasenchado.jp
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 border-b border-neutral-100 py-10">
+        <div class="font-label-sm text-label-sm text-outline uppercase md:pt-1">販売価格 / Pricing</div>
+        <div class="md:col-span-2 mt-2 md:mt-0 font-body-md text-body-md text-primary">
+          各商品ページに表示された価格に基づきます（税込）。
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 border-b border-neutral-100 py-10">
+        <div class="font-label-sm text-label-sm text-outline uppercase md:pt-1">お支払い方法 / Payment</div>
+        <div class="md:col-span-2 mt-2 md:mt-0 font-body-md text-body-md text-primary">
+          <ul class="list-none space-y-2">
+            <li>クレジットカード (Visa, Mastercard, American Express, JCB)</li>
+            <li>Apple Pay / Google Pay</li>
+            <li>銀行振込（前払い）</li>
+          </ul>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 border-b border-neutral-100 py-10">
+        <div class="font-label-sm text-label-sm text-outline uppercase md:pt-1">引き渡し時期 / Delivery</div>
+        <div class="md:col-span-2 mt-2 md:mt-0 font-body-md text-body-md text-primary leading-relaxed">
+          ご注文確定後、通常3営業日以内に発送いたします。予約商品については商品ページに記載の納期をご確認ください。
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 border-b border-neutral-100 py-10">
+        <div class="font-label-sm text-label-sm text-outline uppercase md:pt-1">返品・交換 / Returns</div>
+        <div class="md:col-span-2 mt-2 md:mt-0 font-body-md text-body-md text-primary leading-relaxed">
+          <p class="mb-4">商品に欠陥がある場合を除き、基本的には返品には応じません。</p>
+          <p>
+            万が一、配送中の破損や商品の誤送があった場合は、商品到着後7日以内にメールにてご連絡ください。送料弊社負担にて良品と交換させていただきます。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visual Element -->
+    <div class="mt-32 relative h-96 w-full bg-surface">
+      <img
+        alt=""
+        class="w-full h-full object-cover grayscale opacity-20"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_MX2CRtCZ14rXFwK8pPvymQN3VbBIQ6mWjEP1fENG5noqvFUB2fe2gGzAQyjhuhjLRHyHBlhdp1H2Ur9wWn38VohnhVIGk0HtIRmgg9Xt0yralhoGyVY3nb8_NQdkSqIOi73x4s7iPK0K60W-XVwkeCvyLyxSr_FSaZbEvcGmay5DHjKiyfZMLPDaD7So0RoPV_Pcz1thIUvFkGsOLlLQUPlcr621QPe6MttIfEg6jxw7BvijZEG76oKRn_ZbVq9IbRgFrtYJ5n8"
+      />
+      <div class="absolute inset-0 flex items-center justify-center">
+        <p class="font-serif italic text-h3 text-neutral-300">The Art of Stillness.</p>
+      </div>
+    </div>
+  </div>
+</PageLayout>

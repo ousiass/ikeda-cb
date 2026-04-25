@@ -1,0 +1,133 @@
+---
+import PageLayout from '../components/templates/PageLayout.astro';
+import Button from '../components/atoms/Button.astro';
+import FaqItem from '../components/molecules/FaqItem.astro';
+
+const categories = [
+  { id: 'product-info', label: 'Product Information', active: true },
+  { id: 'shipping-returns', label: 'Shipping & Returns' },
+  { id: 'orders', label: 'Orders' },
+];
+---
+
+<PageLayout title="FAQ | Ikeda Senchado">
+  <div class="max-w-[1440px] mx-auto px-12">
+    <!-- Hero Section -->
+    <section class="py-[120px] flex flex-col items-center text-center">
+      <span class="font-label-sm text-label-sm text-secondary tracking-[0.3em] mb-4 uppercase">Support</span>
+      <h1 class="font-h1 text-h1 text-primary mb-6">Common Inquiries</h1>
+      <p class="font-body-lg text-body-lg text-on-tertiary-container max-w-2xl">
+        Finding clarity in ritual. Browse our frequently asked questions regarding our tea collections,
+        shipping practices, and the art of brewing.
+      </p>
+    </section>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter pb-[120px]">
+      <!-- Category Sidebar -->
+      <aside class="lg:col-span-3">
+        <div class="sticky top-40 flex flex-col gap-6">
+          <h3 class="font-h3 text-h3 mb-4">Categories</h3>
+          <nav class="flex flex-col gap-4">
+            {
+              categories.map((cat) => (
+                <a
+                  href={`#${cat.id}`}
+                  class:list={[
+                    'font-label-sm text-label-sm flex items-center gap-2 transition-colors',
+                    cat.active ? 'text-secondary' : 'text-on-tertiary-container hover:text-secondary',
+                  ]}
+                >
+                  {cat.active && <span class="w-1.5 h-1.5 bg-secondary rounded-full" />}
+                  {cat.label}
+                </a>
+              ))
+            }
+          </nav>
+        </div>
+      </aside>
+
+      <!-- FAQ Content -->
+      <div class="lg:col-span-9 space-y-[80px]">
+        <!-- Product Information -->
+        <section id="product-info">
+          <div class="border-b border-outline-variant pb-4 mb-10">
+            <h2 class="font-h2 text-h2 text-primary">Product Information</h2>
+          </div>
+          <div class="space-y-0">
+            <FaqItem question="How should I store my ceremonial grade matcha?" open>
+              To preserve the vibrant color and delicate flavor profile of our matcha, store it in its
+              original airtight tin in a cool, dark place. For maximum freshness after opening, we recommend
+              refrigeration. Always allow the tin to reach room temperature before opening to prevent
+              condensation.
+            </FaqItem>
+            <FaqItem question="Are your teas organic and sustainable?">
+              We partner exclusively with small-scale farmers in Uji and Shizuoka who practice traditional,
+              sustainable harvesting methods. While some of our specific cultivars are in transition to
+              formal organic certification, all are grown without synthetic pesticides.
+            </FaqItem>
+            <FaqItem question="What is the shelf life of loose leaf teas?">
+              Our green teas are best enjoyed within 6 months of purchase. Oolongs and Black teas maintain
+              their integrity for up to 18 months if kept in a cool, dry environment away from strong odors.
+            </FaqItem>
+          </div>
+        </section>
+
+        <!-- Shipping & Returns -->
+        <section id="shipping-returns">
+          <div class="border-b border-outline-variant pb-4 mb-10">
+            <h2 class="font-h2 text-h2 text-primary">Shipping &amp; Returns</h2>
+          </div>
+          <div class="space-y-0">
+            <FaqItem question="Do you offer international shipping?" open>
+              Yes, we ship to over 40 countries worldwide. International shipping rates are calculated at
+              checkout based on weight and destination. Please note that customs duties and taxes are the
+              responsibility of the recipient.
+            </FaqItem>
+            <FaqItem question="What is your return policy for tea products?">
+              Due to the perishable nature of our products, we cannot accept returns on tea. However, if
+              your order arrives damaged or incorrect, please contact us within 7 days for a replacement.
+            </FaqItem>
+          </div>
+        </section>
+
+        <!-- Visual Break / Image -->
+        <section class="py-10">
+          <div class="w-full aspect-[21/9] overflow-hidden">
+            <img
+              alt=""
+              class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcHoKRHnJXzt9opRbaj2xCee6igBK5FbHreCl-BTtc1vZgL-jO_llH2xJG6Il-RAJ-4PR8Fwrrp10yM8y_LhlM3NqFbReUavqXXAxJfYks-JJMOO8kzsFnvcuivZsT3Z-AAqLdkTxWKxm6-YAvj-w2DMG6c_zuuMBOOCatllW9KhlPRALPYEeVDd1PIw7GtVRawu1_H3AgD3iHDy6BTbui126dI7eJRlcNw5EqmK-lqWmV7Mmqpg8v10KeUbjZcWXBfgDaQgFSCso"
+            />
+          </div>
+        </section>
+
+        <!-- Orders -->
+        <section id="orders">
+          <div class="border-b border-outline-variant pb-4 mb-10">
+            <h2 class="font-h2 text-h2 text-primary">Orders</h2>
+          </div>
+          <div class="space-y-0">
+            <FaqItem question="Can I modify my order after it has been placed?" open>
+              We process orders quickly to ensure freshness. If you need to make a change, please email us
+              within 2 hours of placing your order. Once an order has been fulfilled, we are unable to make
+              modifications.
+            </FaqItem>
+            <FaqItem question="Do you offer wholesale opportunities?">
+              We work with a select number of boutique cafes, tea houses, and retailers. Please visit our
+              Wholesale page or contact our partnership team for more information.
+            </FaqItem>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Contact CTA -->
+    <section class="border-t border-outline-variant py-[120px] flex flex-col items-center">
+      <h3 class="font-h2 text-h2 text-primary mb-6 text-center">Still seeking clarity?</h3>
+      <p class="font-body-md text-body-md text-on-tertiary-container mb-10 text-center max-w-lg">
+        Our tea masters are available to assist with specific brewing questions or order inquiries.
+      </p>
+      <Button variant="primary" as="a" href="/contact/">Contact Our Team</Button>
+    </section>
+  </div>
+</PageLayout>

@@ -1,12 +1,108 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import PageLayout from '../components/templates/PageLayout.astro';
+import Button from '../components/atoms/Button.astro';
+import Icon from '../components/atoms/Icon.astro';
+import SectionHeading from '../components/molecules/SectionHeading.astro';
+import ProductCard from '../components/molecules/ProductCard.astro';
 ---
 
-<BaseLayout title="Ikeda Senchado — Scaffold">
-  <main class="max-w-container-max mx-auto px-gutter py-section-padding">
-    <h1 class="font-h1 text-h1 text-primary">Ikeda Senchado</h1>
-    <p class="font-body-lg text-body-lg text-on-surface-variant mt-4">
-      Scaffold complete. Tailwind tokens applied.
-    </p>
-  </main>
-</BaseLayout>
+<PageLayout title="Ikeda Senchado | Purity in Every Cup">
+  <!-- Hero Section -->
+  <section class="relative h-[921px] flex items-center justify-center overflow-hidden bg-surface">
+    <div class="absolute inset-0 z-0">
+      <img
+        class="w-full h-full object-cover opacity-90"
+        alt=""
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCT-wGyw8iaeePeDwO8YCxSCYDtgZtZkzAYix2e1Zjr_barFxG_LZKLSNM6QxKhHm6fzIEzRTuFuHpl2p5nuu3A5vj99B7zaSGIhh4sXrE6ubS_uk_cHqmgdCBan7M0M9AiCirUucVb3S-b9qziGCe_8zNHBvcOoZxOHZOzb9M_VGi5ma9I-ouhUQKHxorpNnQHaOXA1YhyyPP1MLIxiup18h7WgIaTNsS1VeTfzdDimRnQL3btaGVXrRMJJki-ZOfhbbfLywTewys"
+      />
+    </div>
+    <div class="relative z-10 text-center px-4 max-w-4xl">
+      <span class="font-label-sm text-label-sm text-on-surface-variant mb-6 block uppercase tracking-[0.3em]">
+        The Art of Stillness
+      </span>
+      <h1 class="font-h1 text-h1 text-on-surface mb-8">Purity in every drop, silence in every sip.</h1>
+      <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+        <Button variant="primary" as="a" href="/collection/">Discover the Collection</Button>
+        <Button variant="outline" as="a" href="#">Our Process</Button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy / Intro -->
+  <section class="py-[120px] px-8 md:px-16 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+    <div>
+      <h2 class="font-h2 text-h2 text-on-surface mb-8">Cultivating Ma.</h2>
+      <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+        Inspired by the Japanese concept of *Ma*—the intentional space between things—our teas are sourced
+        from single-estate harvests in Uji and Shizuoka. We believe tea is more than a beverage; it is a
+        ritual of reclamation.
+      </p>
+    </div>
+    <div class="bg-surface-container p-12 aspect-square flex items-center justify-center">
+      <div class="border border-outline-variant p-8 h-full w-full flex flex-col justify-center items-center text-center">
+        <Icon name="spa" class="text-4xl mb-4 text-secondary" />
+        <h3 class="font-h3 text-h3 mb-4 text-on-surface">Ceremonial Grade</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant">
+          Unblended, single-origin matcha and loose leaf teas, shade-grown for depth and umami.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="py-[120px] bg-white">
+    <div class="max-w-[1920px] mx-auto px-8 md:px-16">
+      <SectionHeading title="Seasonal Selections" linkText="View All Shop" linkHref="/collection/" />
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <ProductCard
+          image="https://lh3.googleusercontent.com/aida-public/AB6AXuCfqkZoQgBN6wIUPuGhZ1-PMouQ3FmPzTdV05WCmtD1Bs3wEcV1GGQts1tWxyEmONolRcjTRzAFZRvWj5VoDUv0sg-sHNwh2aprRnKKD5UbUtcnwUaTyTAYX8Gle9Dt3cWNLqHFM_GnzMAVoqoFMKKKuDNenNpIwnAxAAQsLTjY_yy288cZgqfKjEHkO9gOjCU4r-xYWmw7UCYRpbEEe_Z8Uxqx_ILfkV1v8ZYmtABrHFpitta_lSh7LgAyOYmCkWBzSRclB1707As"
+          alt=""
+          label="Uji, Kyoto"
+          name="Ceremonial Matcha"
+          price="$48.00"
+          href="/product/"
+        />
+        <ProductCard
+          image="https://lh3.googleusercontent.com/aida-public/AB6AXuC8wBhRJkxjBgITnWFBNSgiuNUxM1NFfE6cDb0Hm2IOEJ1YTSbyvL81vSQgrmm21qoghzY15-aEmq7r6ycgewV4zvou0yzmIu8L0IfvPhpKBluX7XbBcmulXa7S9o1uSkL5TTgjlX1x9a-NAaJG97fxp1LPpmbwzD-utWBqjhH05wMiXB7HMkHtG6ZtOpZzc5mczc7rdz2PufBJHtuS1DMnZwMekv5DXuudlt3CvGEc_4OiZcswW90jbNx6L678RpqWdGK0ZQavUp8"
+          alt=""
+          label="Hand-Carved"
+          name="Takayama Chasen"
+          price="$65.00"
+          href="/product/"
+        />
+        <ProductCard
+          image="https://lh3.googleusercontent.com/aida-public/AB6AXuDe2B2JPTcbunc5kzZOj7-LuLGhyL5Lq9LmtNlu43eZX4P5MZd0J1e_KX_dcxXcDvEgAV7roTtRxI7Zy6vPXtVUGuIjbOnGEreBdEn1pbvf6PUebCTweth1mSf_SrU-Yp6Hz3vE1kp10rRTM9xzAP7GGBPN-oJbnmjWjTtQKuqRXK1r-m_4xKYYZHz6wmneBVoJCH9MZg6XAhRDdL2N_1QOCrMU4GXykM9VMOWaR76XAlx8X_6bl6pRYyXQ0aC3aU-1DxnYvImjt2U"
+          alt=""
+          label="Shizuoka First Flush"
+          name="Imperial Gyokuro"
+          price="$32.00"
+          href="/product/"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter / CTA -->
+  <section class="py-[120px] bg-stone-900 text-white">
+    <div class="max-w-4xl mx-auto px-8 text-center">
+      <h2 class="font-h2 text-h2 mb-6">Join the Ceremony.</h2>
+      <p class="font-body-lg text-stone-400 mb-12">
+        Receive seasonal harvest updates, brewing guides, and exclusive access to limited-edition ceramic
+        releases.
+      </p>
+      <form class="flex flex-col md:flex-row gap-4">
+        <input
+          class="flex-grow bg-transparent border-b border-stone-700 focus:border-stone-400 text-stone-100 placeholder:text-stone-600 focus:ring-0 px-0 py-4 font-label-sm text-label-sm outline-none transition-colors"
+          placeholder="YOUR EMAIL ADDRESS"
+          type="email"
+        />
+        <button
+          type="submit"
+          class="bg-white text-stone-950 px-12 py-4 font-label-sm text-label-sm uppercase hover:bg-secondary hover:text-white transition-colors duration-300"
+        >
+          Subscribe
+        </button>
+      </form>
+    </div>
+  </section>
+</PageLayout>

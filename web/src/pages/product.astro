@@ -1,0 +1,135 @@
+---
+import PageLayout from '../components/templates/PageLayout.astro';
+import Button from '../components/atoms/Button.astro';
+import Icon from '../components/atoms/Icon.astro';
+---
+
+<PageLayout title="Uji Reserve Matcha | Ikeda Senchado" activePage="Shop">
+  <div class="pt-[100px]">
+    <!-- Product Detail Canvas -->
+    <section class="max-w-[1920px] mx-auto px-8 md:px-16 py-24 grid grid-cols-1 lg:grid-cols-12 gap-16">
+      <!-- Gallery Column -->
+      <div class="lg:col-span-7 flex flex-col md:flex-row gap-6">
+        <div class="md:w-20 order-2 md:order-1 flex md:flex-col gap-4 overflow-x-auto scrollbar-hide">
+          <div class="w-20 h-20 bg-surface-container-high cursor-pointer flex-shrink-0">
+            <img
+              class="w-full h-full object-cover"
+              alt=""
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUOhreKcnSPQ4TcwlsSTh291H2tiszOv3SdTKZA3oeWREYB0oOWK7nDFZ4Xxe1NjBStYPFPcXlczMJBqXlmNLRAwy6gyJhZVIMGC8Gl3dx9RO4G5h3WEkKXf6H4Em8uOQaOd-pHc3w5bdra6otam8gc0aD5riMu4nr-WVy49pnsjM5NdymsEirlhW0T4HLc5Q7ZsLz8_SIGCy0Y1Du_uTDOCIKnANn6X2PTQM-OSSDfEw8n23SalCi9Vy9j-Q3iIIM_6Q7692veLQ"
+            />
+          </div>
+          <div class="w-20 h-20 bg-surface-container-high cursor-pointer flex-shrink-0">
+            <img
+              class="w-full h-full object-cover"
+              alt=""
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpsa3JeePOWpFs7bPqqxDedBI6UNiOHtA7HSs2QBFw0_NFcjygTj30o09Y9b6fm3f2jg5OhhJ1Q8YT371Vabh1ZRCvBClellliYgEYdLFMyqjH1EgQPcMmvSBGLOwh64MXthsXvSJ5lQO1NDzRPOuimZt8wIa65UOedXWXVlG0iolhgAskZQXZUYNqh2vS-Uf95642PuMjl8DSUeHZewRcL1uYJ0n_woACHeRKKQ2EmREPYIyTTemsKQqFLX2ijNn4rw0800dNlbU"
+            />
+          </div>
+          <div class="w-20 h-20 bg-surface-container-high cursor-pointer flex-shrink-0">
+            <img
+              class="w-full h-full object-cover"
+              alt=""
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCwPmfoONgqgZc_aaND-RtEbn5n_-rGQt1e7YfhGT2uXvYVhb_vlGgwHPOw3TkJd9Ad0CFlDMsmBCGv3h37JxW3KqPxzGjnU9guniNf95FDtc4I8P99qH3W88rEuMP-EI1L7LzJuz5NpysHDjDOBVcTdgYQEw1YcK-NNWsj7EZd2ZLgu7QyHeKB5ufil4gDIQiMmgQg5hggDy_hhSkFAxH4B-tLl8opJODpwa8kwyzRASdsadEVqSwlfyhDAeeYsDxYd7StDmb2v0"
+            />
+          </div>
+        </div>
+        <div class="flex-1 order-1 md:order-2 aspect-[4/5] bg-surface-container-low overflow-hidden">
+          <img
+            class="w-full h-full object-cover"
+            alt=""
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAON8gG4KlwU5bTLlg9ze_dPacMZktyGlrtEMJUJlM5w8ippc4HYfuqK0telz2alm_5fYPNfc2N6LjGrFyP_ZNXsPNQO22XGJpuyJ3g3ahu6C-6y55XOlPL_h2-v0Ah7yiT0SvYYqw7HwvVMenjVpm1XDpOHJchEVwypcJX_zx-3d8Zly7749cXWiQ7vMyTxbJrgjiuErXOlw5V-bXYWvIvtmTpBDPQjOX4J35EJY-5qmtVd4aW7zsZBKtghMX4oiCbJQv_IDboMs"
+          />
+        </div>
+      </div>
+
+      <!-- Info Column -->
+      <div class="lg:col-span-5 flex flex-col justify-start">
+        <div class="mb-12">
+          <span class="font-label-sm text-label-sm text-secondary uppercase mb-4 block">Ceremonial Grade</span>
+          <h1 class="font-h1 text-h1 text-on-surface mb-4">Uji Reserve Matcha</h1>
+          <p class="font-h3 text-h3 text-on-surface-variant font-light">$64.00</p>
+        </div>
+        <div class="space-y-8 mb-12">
+          <div>
+            <h2 class="font-label-sm text-label-sm uppercase text-on-surface mb-3">Description</h2>
+            <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Harvested during the first flush in the hills of Uji, Kyoto. This rare reserve offers a profound
+              umami profile, vibrant emerald hue, and a silky, lingering finish. Each leaf is stone-ground by
+              hand to preserve its delicate aromatic integrity.
+            </p>
+          </div>
+          <div class="grid grid-cols-2 gap-8 border-y border-outline-variant py-8">
+            <div>
+              <h2 class="font-label-sm text-label-sm uppercase text-on-surface mb-3">Origin</h2>
+              <p class="font-body-md text-body-md text-on-surface-variant">Uji, Kyoto, Japan</p>
+            </div>
+            <div>
+              <h2 class="font-label-sm text-label-sm uppercase text-on-surface mb-3">Texture</h2>
+              <p class="font-body-md text-body-md text-on-surface-variant">Velvety &amp; Creamy</p>
+            </div>
+          </div>
+          <div>
+            <h2 class="font-label-sm text-label-sm uppercase text-on-surface mb-3">Brewing Ritual</h2>
+            <ul class="space-y-3">
+              <li class="flex items-center gap-4">
+                <span class="w-8 h-[1px] bg-secondary"></span>
+                <span class="font-body-md text-body-md text-on-surface-variant">Water Temp: 80°C / 175°F</span>
+              </li>
+              <li class="flex items-center gap-4">
+                <span class="w-8 h-[1px] bg-secondary"></span>
+                <span class="font-body-md text-body-md text-on-surface-variant">2 Bamboo Scoops (2g)</span>
+              </li>
+              <li class="flex items-center gap-4">
+                <span class="w-8 h-[1px] bg-secondary"></span>
+                <span class="font-body-md text-body-md text-on-surface-variant">Whisk vigorously in 'W' motion</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-col gap-4">
+          <Button variant="primary" as="a" href="/cart/" fullWidth>
+            Add to Cart
+            <Icon name="shopping_bag" class="text-[18px] ml-3" />
+          </Button>
+          <Button variant="outline" as="button" fullWidth>Subscribe &amp; Save 15%</Button>
+        </div>
+        <div class="mt-12 flex items-center gap-8 text-on-surface-variant">
+          <div class="flex items-center gap-2">
+            <Icon name="local_shipping" class="text-[20px]" />
+            <span class="font-label-sm text-[10px]">Fast Shipping</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <Icon name="eco" class="text-[20px]" />
+            <span class="font-label-sm text-[10px]">Ethically Sourced</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Details Section -->
+    <section class="bg-surface-container-lowest py-32 border-t border-stone-100">
+      <div class="max-w-[1920px] mx-auto px-8 md:px-16 grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+        <div>
+          <h2 class="font-h2 text-h2 mb-8">The Art of the First Flush</h2>
+          <p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">
+            Our Uji Reserve is meticulously selected from the very first harvest of the spring season. This
+            period, known as 'Shincha', produces leaves that are bursting with nutrients and a natural
+            sweetness that cannot be replicated.
+          </p>
+          <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+            Shaded for 21 days before harvest, the tea plants increase their chlorophyll and L-theanine levels,
+            resulting in that iconic deep green color and the calm, focused energy that premium matcha is
+            famous for.
+          </p>
+        </div>
+        <div class="aspect-square bg-surface-container">
+          <img
+            class="w-full h-full object-cover"
+            alt=""
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc6RZdwalwhfi-uelu4_e1mf3SEbEDqd6PqEYDqGhC5A6-FAu5O8hnHUcTZfpUJNHijQjxTcajeZ2mgl1ublViKJrlU4SSd0OVgiaOdhKexSLO6ecrkyGJYghlv2gpoiipRnk4Hm5VNTQWi6fs6c1nE_uTND4fhotAgHuecgLLgcCHhGach8-Zdyv-RSewcUlpRpd6v4FENOVQYsqDjut1K0NUNcjmjSjUdiEZHT1RfBcrKU2sIKBOKjIDk5WnITspsKNdyPAKD4g"
+          />
+        </div>
+      </div>
+    </section>
+  </div>
+</PageLayout>
